@@ -238,9 +238,10 @@ export const YachtSection = () => {
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as any }}
                   className="absolute inset-0"
                 >
-                  <img 
-                    src={VESSEL.detailedFeatures?.[activeFeatureIndex]?.image || "https://duoyacht.com/images/gallery/zewnatrz/galeria-zewnatrz%20(5).jpg"} 
+                  <img
+                    src={VESSEL.detailedFeatures?.[activeFeatureIndex]?.image || "https://duoyacht.com/images/gallery/zewnatrz/galeria-zewnatrz%20(5).jpg"}
                     alt={VESSEL.detailedFeatures?.[activeFeatureIndex]?.title}
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
@@ -387,9 +388,10 @@ export const YachtSection = () => {
                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }}
                     className="absolute inset-0"
                   >
-                    <img 
-                      src={WATER_TOYS[activeToyIndex].image} 
+                    <img
+                      src={WATER_TOYS[activeToyIndex].image}
                       alt={WATER_TOYS[activeToyIndex].title}
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

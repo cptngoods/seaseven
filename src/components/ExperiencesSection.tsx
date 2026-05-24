@@ -75,9 +75,10 @@ export const ExperiencesSection = () => {
                   className="group relative"
                 >
                   <div className="relative aspect-[3/4] overflow-hidden rounded-[3rem] soft-shadow mb-8">
-                    <img 
-                      src={exp.image} 
+                    <img
+                      src={exp.image}
                       alt={exp.title}
+                      loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                       referrerPolicy="no-referrer"
                     />
@@ -110,11 +111,71 @@ export const ExperiencesSection = () => {
                 </motion.div>
               ))}            </div>
           </motion.div>
+
+          {/* Private Events */}
+          {EXPERIENCES.filter(exp => exp.type === 'special').length > 0 && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.div variants={itemVariants} className="flex items-center gap-8 mb-16">
+                <h3 className="text-xs uppercase tracking-[0.5em] font-bold text-rose font-display whitespace-nowrap">Private Events</h3>
+                <div className="h-[1px] flex-1 bg-linen/10" />
+              </motion.div>
+
+              <div className="grid md:grid-cols-2 gap-12">
+                {EXPERIENCES.filter(exp => exp.type === 'special').map((exp) => (
+                  <motion.div
+                    key={exp.id}
+                    variants={itemVariants}
+                    className="group relative"
+                  >
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-[3rem] soft-shadow mb-8">
+                      <img
+                        src={exp.image}
+                        alt={exp.title}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-ocean/20 group-hover:bg-transparent transition-colors duration-700" />
+
+                      <div className="absolute bottom-8 left-8 right-8">
+                        <button
+                          onClick={() => setSelectedExp(exp)}
+                          className="w-full py-4 bg-linen/10 backdrop-blur-md text-linen border border-linen/20 rounded-2xl font-display font-bold text-[10px] uppercase tracking-widest hover:bg-rose hover:border-rose transition-all duration-500"
+                        >
+                          Explore Details
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="px-4 space-y-4">
+                      <div className="flex justify-between items-start">
+                        <h3 className="text-3xl font-serif italic text-linen">{exp.title}</h3>
+                        <span className="text-rose font-sans text-lg">{exp.priceFrom}</span>
+                      </div>
+                      <p className="text-linen/50 font-sans text-sm leading-relaxed line-clamp-2">
+                        {exp.description}
+                      </p>
+                      {exp.duration && (
+                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-linen/30 font-bold font-display">
+                          <Clock className="w-3 h-3" /> {exp.duration}
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
 
 
-      <ExperienceModal 
+      <ExperienceModal
         experience={selectedExp} 
         onClose={() => setSelectedExp(null)} 
       />

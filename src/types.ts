@@ -52,3 +52,11 @@ export interface Destination {
   image: string;
   highlights: string[];
 }
+
+export interface Extra {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  priceFrom: string;
+}

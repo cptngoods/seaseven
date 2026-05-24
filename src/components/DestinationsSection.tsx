@@ -98,9 +98,10 @@ export const DestinationsSection = () => {
               }}
             >
               <div className="relative aspect-video overflow-hidden rounded-[1.5rem] mb-4 soft-shadow">
-                <img 
-                  src={dest.image} 
+                <img
+                  src={dest.image}
                   alt={dest.name}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />

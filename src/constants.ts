@@ -1,4 +1,4 @@
-import { VesselSpecs, Experience, Destination } from './types';
+import { VesselSpecs, Experience, Destination, Extra } from './types';
 
 export const VESSEL: VesselSpecs = {
   name: 'SEA SEVEN',
@@ -99,6 +99,76 @@ export const EXPERIENCES: Experience[] = [
     ]
   },
   {
+    id: 'gdansk-motlawa',
+    title: 'Gdańsk Motława Tour',
+    description: "A cinematic voyage through the heart of historic Gdańsk. Glide along the Motława river past the medieval Crane (Żuraw), the Granaries on Spichlerze Island, and the colourful façades of Długie Pobrzeże — all from the teak deck of Sea Seven. A short, sophisticated escape into a thousand years of Hanseatic history.",
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg/1280px-Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg',
+    type: 'day',
+    priceFrom: '€1,400',
+    duration: '3 Hours',
+    routes: [
+      '14:00 - Departure from Marina Gdańsk',
+      '14:30 - Cruise past the Crane (Żuraw) & Old Town',
+      '15:30 - Anchor near Westerplatte with prosecco service',
+      '17:00 - Return upriver to Długie Pobrzeże'
+    ],
+    itinerary: [
+      {
+        location: 'Marina Gdańsk',
+        highlight: 'Welcome aboard at the foot of the Old Town.',
+        tags: ['Old Town', 'Welcome'],
+        image: 'https://images.unsplash.com/photo-1565018900183-9e45f5164d7d?auto=format&fit=crop&q=80&w=1920',
+        extendedDescription: 'Board Sea Seven directly in the heart of Gdańsk, with the spires of St. Mary\'s rising above the medieval skyline. Our crew greets you with chilled prosecco and Pomeranian canapés.'
+      },
+      {
+        location: 'The Crane (Żuraw) & Długie Pobrzeże',
+        highlight: 'Sail past 700 years of Hanseatic heritage.',
+        tags: ['History', 'Architecture'],
+        image: 'https://images.unsplash.com/photo-1590273466070-40c466b4432c?auto=format&fit=crop&q=80&w=1920',
+        extendedDescription: 'Glide slowly beneath the iconic wooden Crane, once the largest port crane in medieval Europe, and along the painted gables of Długie Pobrzeże — a view of Gdańsk only seen from the water.'
+      },
+      {
+        location: 'Westerplatte',
+        highlight: 'Anchor at the site where WWII began.',
+        tags: ['Memorial', 'Anchorage'],
+        image: 'https://images.unsplash.com/photo-1549413203-04987f62fac6?auto=format&fit=crop&q=80&w=1920',
+        extendedDescription: 'We drop anchor near the Westerplatte peninsula — a place of profound historical weight — to enjoy a long pause with sparkling wine, light bites, and uninterrupted views of the harbour entrance.'
+      }
+    ]
+  },
+  {
+    id: 'gdansk-river',
+    title: 'Gdańsk Old Town River Cruise',
+    description: 'Navigate the historic Motława river into the heart of medieval Gdańsk. Pass the iconic Crane, amber workshops, and Gothic facades before anchoring for a private guided tour of the Old Town.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
+    type: 'day',
+    priceFrom: '€2,400',
+    duration: '6 Hours',
+    routes: [
+      '10:00 - Departure from Marina Gdynia',
+      '11:30 - Enter Motława river approach',
+      '12:00 - Anchor near Żuraw Crane / Old Town',
+      '13:00 - Private guided Old Town walk (optional)',
+      '15:30 - Return cruise via open bay',
+      '17:00 - Return to marina'
+    ]
+  },
+  {
+    id: 'corporate-event',
+    title: 'Corporate & Private Events',
+    description: 'The ultimate venue for product launches, client entertainment, or team retreats. SEA SEVEN accommodates up to 16 guests with full catering, AV capability, and a backdrop that no conference room can match.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg',
+    type: 'special',
+    priceFrom: 'POA',
+    duration: 'Flexible',
+    routes: [
+      'Full-day or half-day packages available',
+      'Customised catering and theming',
+      'AV equipment on request',
+      'Pick-up from Sopot, Gdańsk or Gdynia'
+    ]
+  },
+  {
     id: 'hel-adventure',
     title: 'Hel Peninsula Escape',
     description: "A journey to the 'Beginning of Poland'. Cross the bay to the sandy shores of Hel. Explore the seal sanctuary, enjoy the freshest seafood, and swim in the shallow, turquoise-tinted waters of the peninsula's wild beaches.",
@@ -121,28 +191,87 @@ export const DESTINATIONS: Destination[] = [
     id: 'sopot',
     name: 'Sopot',
     description: 'The pearl of the Baltic. Sopot is synonymous with elegance, featuring the longest wooden pier in Europe and the iconic Grand Hotel. Anchor off the shore for a sophisticated day of SPA treatments or high-end dining.',
-    image: 'https://images.unsplash.com/photo-1590273466070-40c466b4432c?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Muelle_de_Sopot%2C_Polonia%2C_2013-05-22%2C_DD_20.jpg/1280px-Muelle_de_Sopot%2C_Polonia%2C_2013-05-22%2C_DD_20.jpg',
     highlights: ['Sopot Pier (Molo)', 'Grand Hotel', 'Monte Cassino St.']
   },
   {
     id: 'gdansk',
     name: 'Gdańsk',
     description: 'A city of history and amber. Enter the heart of the Old Town via the Motława river, passing the historic Crane and medieval architecture. Experience a cultural voyage through Poland\'s maritime capital.',
-    image: 'https://images.unsplash.com/photo-1565018900183-9e45f5164d7d?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
     highlights: ['Old Town / Motława', 'The Crane (Żuraw)', 'Westerplatte']
   },
   {
     id: 'gdynia',
     name: 'Gdynia',
     description: 'Modern, vibrant, and deep-water oriented. Gdynia is the perfect home base for Sea Seven, offering world-class marina facilities and a sleek, contemporary atmosphere.',
-    image: 'https://images.unsplash.com/photo-1549413203-04987f62fac6?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Gdynia_Or%C5%82owo_Pier_%2824217249262%29.jpg/1280px-Gdynia_Or%C5%82owo_Pier_%2824217249262%29.jpg',
     highlights: ['Kościuszko Square', 'Orłowo Cliffs', 'Marina Gdynia']
   },
   {
     id: 'hel',
     name: 'Hel Peninsula',
     description: 'A thin strip of sand separating the bay from the open Baltic. Hel is nature at its rawest—pine forests, wide beaches, and a unique fishing-village charm.',
-    image: 'https://images.unsplash.com/photo-1572520336214-7265a6c11b0e?auto=format&fit=crop&q=80&w=1920',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Hel_in_summer.jpg/1280px-Hel_in_summer.jpg',
     highlights: ['Seal Sanctuary', 'Hel Lighthouse', 'White Sand Beaches']
+  }
+];
+
+export const EXTRAS: Extra[] = [
+  {
+    id: 'private-chef',
+    name: 'Private Chef',
+    description: 'A dedicated chef on board crafts a bespoke menu around your guests — Baltic catch of the day, Pomeranian classics, or fine-dining tasting menus served on the aft deck.',
+    icon: 'ChefHat',
+    priceFrom: '€650'
+  },
+  {
+    id: 'content-creator',
+    name: 'Content Creator',
+    description: 'Photo & video specialist documenting your charter — drone footage, candid moments, edited reels delivered within 48 hours, ready for social.',
+    icon: 'Camera',
+    priceFrom: '€800'
+  },
+  {
+    id: 'bartender',
+    name: 'Craft Bartender',
+    description: 'Mixologist with a curated bar — signature cocktails, Polish-spirit flights, and zero-proof creations served from a custom-set flybridge bar.',
+    icon: 'Martini',
+    priceFrom: '€450'
+  },
+  {
+    id: 'dj',
+    name: 'DJ Set',
+    description: 'Resident DJ from the Tri-City scene tailoring the soundtrack to your day — lounge for sunset, deep house for the after-anchor.',
+    icon: 'Disc3',
+    priceFrom: '€700'
+  },
+  {
+    id: 'dj-sax',
+    name: 'DJ + Live Sax',
+    description: 'The signature SEA SEVEN sundowner — DJ paired with a live saxophonist riffing over the set. Equal parts Ibiza and the Baltic.',
+    icon: 'Music4',
+    priceFrom: '€1,400'
+  },
+  {
+    id: 'sommelier',
+    name: 'Sommelier Pairing',
+    description: 'A certified sommelier guides a tasting of European and rare Polish wines, paired course-by-course with the galley menu.',
+    icon: 'Wine',
+    priceFrom: '€550'
+  },
+  {
+    id: 'florist',
+    name: 'Floral Styling',
+    description: 'Bespoke arrangements for proposals, anniversaries or private celebrations — from a single rose on the master bed to a fully styled flybridge.',
+    icon: 'Flower2',
+    priceFrom: '€350'
+  },
+  {
+    id: 'wellness',
+    name: 'Onboard Wellness',
+    description: 'Licensed therapist for massage, holistic treatments and stretch sessions — between excursions or as a full at-anchor spa day.',
+    icon: 'Sparkles',
+    priceFrom: '€400'
   }
 ];

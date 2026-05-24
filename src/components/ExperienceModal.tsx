@@ -34,9 +34,10 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
           >
             {/* Header / Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full flex-shrink-0">
-              <img 
-                src={experience.image} 
+              <img
+                src={experience.image}
                 alt={experience.title}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -127,9 +128,10 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
 
                                   {step?.image && (
                                     <div className="relative aspect-[16/9] rounded-3xl overflow-hidden soft-shadow group-hover:scale-[1.02] transition-transform duration-700">
-                                      <img 
-                                        src={step.image} 
+                                      <img
+                                        src={step.image}
                                         alt={step.location}
+                                        loading="lazy"
                                         className="absolute inset-0 w-full h-full object-cover"
                                         referrerPolicy="no-referrer"
                                       />

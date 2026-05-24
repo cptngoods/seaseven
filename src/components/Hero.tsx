@@ -28,9 +28,13 @@ export const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center grain-overlay aurora-bg">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <img 
+        <img
           src="https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg"
           alt="M/Y SEA SEVEN"
+          width={2000}
+          height={1333}
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover scale-110"
           referrerPolicy="no-referrer"
         />

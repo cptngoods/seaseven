@@ -35,9 +35,10 @@ export const CrewSection = () => {
             className="lg:col-span-5 relative"
           >
             <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden soft-shadow">
-              <img 
-                src="https://duoyacht.com/images/gallery/crew/crew%20(1).jpg" 
+              <img
+                src="https://duoyacht.com/images/gallery/crew/crew%20(1).jpg"
                 alt="Sea Seven Crew"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -91,9 +92,10 @@ export const CrewSection = () => {
                 ].map((member, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden border border-linen/10 shrink-0">
-                      <img 
-                        src={member.image} 
+                      <img
+                        src={member.image}
                         alt={member.role}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />

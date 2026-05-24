@@ -79,9 +79,10 @@ export const TestimonialsSection = () => {
 
               <div className="flex flex-col items-center space-y-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-rose/30 p-1">
-                  <img 
-                    src={TESTIMONIALS[currentIndex].image} 
+                  <img
+                    src={TESTIMONIALS[currentIndex].image}
                     alt={TESTIMONIALS[currentIndex].author}
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-full"
                     referrerPolicy="no-referrer"
                   />

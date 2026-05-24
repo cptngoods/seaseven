@@ -6,18 +6,22 @@ import { ExperiencesSection } from './components/ExperiencesSection';
 import { DestinationsSection } from './components/DestinationsSection';
 import { CrewSection } from './components/CrewSection';
 import { CuisineSection } from './components/CuisineSection';
+import { ExtrasSection } from './components/ExtrasSection';
 import { GallerySection } from './components/GallerySection';
 import { BookingSection } from './components/BookingSection';
 import { FAQSection } from './components/FAQSection';
 import { SocialSection } from './components/SocialSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { Footer } from './components/Footer';
+import { SeasonBanner } from './components/SeasonBanner';
+import { CookieBanner } from './components/CookieBanner';
 import { motion } from 'motion/react';
 import { Anchor } from 'lucide-react';
 
 export default function App() {
   return (
     <div className="min-h-screen selection:bg-rose/30 selection:text-ocean">
+      <SeasonBanner />
       <Navbar />
       
       <main>
@@ -33,9 +37,12 @@ export default function App() {
               transition={{ duration: 1 }}
               className="relative aspect-[4/5] rounded-[4rem] overflow-hidden soft-shadow"
             >
-              <img 
-                src="https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg" 
+              <img
+                src="https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg"
                 alt="M/Y SEA SEVEN"
+                width={1200}
+                height={1500}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -112,6 +119,8 @@ export default function App() {
         
         <CuisineSection />
 
+        <ExtrasSection />
+
         <GallerySection />
         
         <TestimonialsSection />
@@ -122,6 +131,7 @@ export default function App() {
 
       <Footer />
       <WhatsAppButton />
+      <CookieBanner />
     </div>
   );
 }
