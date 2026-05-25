@@ -37,12 +37,12 @@ export const Navbar = () => {
       isScrolled ? "glass-nav py-2" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
+        <a href="/" aria-label="SEA · 7" className="flex items-center gap-3 group">
           <span className={cn(
-            "text-2xl font-display font-bold tracking-[0.2em] uppercase transition-colors duration-500",
+            "text-xl md:text-2xl font-display font-light tracking-[0.45em] uppercase transition-colors duration-500",
             isScrolled ? "text-ocean" : "text-linen"
           )}>
-            SEA SEVEN
+            SEA<span className="mx-2 opacity-70">·</span>7
           </span>
         </a>
 

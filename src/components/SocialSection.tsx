@@ -11,7 +11,7 @@ const INSTAGRAM_POSTS = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1544551763-47a0159f963f?auto=format&fit=crop&q=80&w=800', // Yacht luxury exterior
+    image: 'https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg', // Yacht luxury exterior
     likes: '856',
     comments: '24'
   },
@@ -103,7 +103,7 @@ export const SocialSection = () => {
                 alt={`Instagram post ${post.id}`}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                referrerPolicy="no-referrer"
+
               />
               
               {/* Overlay */}

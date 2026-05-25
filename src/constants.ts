@@ -155,17 +155,92 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 'corporate-event',
-    title: 'Corporate & Private Events',
-    description: 'The ultimate venue for product launches, client entertainment, or team retreats. SEA SEVEN accommodates up to 16 guests with full catering, AV capability, and a backdrop that no conference room can match.',
+    title: 'Corporate & Client Events',
+    description: 'The ultimate setting for product launches, executive retreats and high-touch B2B entertainment. Up to 16 guests, full catering, AV-ready, and a horizon no boardroom can match.',
     image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg',
     type: 'special',
-    priceFrom: 'POA',
-    duration: 'Flexible',
+    priceFrom: '€4,500',
+    duration: 'Half / Full Day',
     routes: [
-      'Full-day or half-day packages available',
-      'Customised catering and theming',
-      'AV equipment on request',
+      'Branded welcome & AV setup on flybridge',
+      'Bespoke catering & sommelier-paired wine',
+      'Dedicated crew & event coordinator',
       'Pick-up from Sopot, Gdańsk or Gdynia'
+    ]
+  },
+  {
+    id: 'wedding-at-sea',
+    title: 'Wedding at Sea',
+    description: 'Intimate ceremonies, vow renewals and post-wedding cruises on the Bay of Gdańsk. From a private exchange of vows under the flybridge canopy to a full sunset reception.',
+    image: 'https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg',
+    type: 'special',
+    priceFrom: '€6,500',
+    duration: '6 Hours',
+    routes: [
+      'Florist & ceremony styling',
+      'Sunset-timed sailing route',
+      'Chef-curated wedding tasting menu',
+      'Photographer & DJ coordination'
+    ]
+  },
+  {
+    id: 'milestone-birthday',
+    title: 'Milestone Birthdays',
+    description: 'Mark the big ones — 30th, 40th, 50th — in a way nobody will forget. Themed décor, custom cake, and an open-bar atmosphere from welcome aboard to last anchor.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg',
+    type: 'special',
+    priceFrom: '€3,800',
+    duration: '5 Hours',
+    routes: [
+      'Themed décor & flower styling',
+      'Custom celebration cake',
+      'Bartender & DJ included',
+      'Champagne service on the foredeck'
+    ]
+  },
+  {
+    id: 'stag-hen',
+    title: 'Bachelor & Bachelorette Party',
+    description: 'High-energy pre-wedding parties with DJ, mixology, and the entire Tri-City skyline as your dance floor. Tasteful enough to remember; private enough to forget.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-2.jpg',
+    type: 'special',
+    priceFrom: '€4,200',
+    duration: '6 Hours',
+    routes: [
+      'Resident DJ set + live sax option',
+      'Craft bartender & cocktail menu',
+      'Branded welcome & party styling',
+      'Late-night return to marina'
+    ]
+  },
+  {
+    id: 'proposal-anniversary',
+    title: 'Proposal & Anniversary',
+    description: 'An intimate, two-guest charter timed to sunset over Sopot. Florals, champagne, and a private photographer to capture the moment — yours forever.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-4.jpg',
+    type: 'special',
+    priceFrom: '€2,800',
+    duration: '3 Hours',
+    routes: [
+      'Private two-guest charter',
+      'Floral styling & rose-petal staging',
+      'Premium champagne service',
+      'Discreet photographer (optional)'
+    ]
+  },
+  {
+    id: 'production-rental',
+    title: 'Film & Photo Production',
+    description: 'SEA SEVEN as your floating set — for editorial fashion shoots, music videos and commercials. Full crew on standby, sailing permits handled, and every angle on the bay accessible.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg',
+    type: 'special',
+    priceFrom: '€5,500 / day',
+    duration: 'Per Day',
+    routes: [
+      'Full crew on standby',
+      'Sailing permits & locations handled',
+      'Power & catering for production team',
+      'Flexible scheduling around the light'
     ]
   },
   {

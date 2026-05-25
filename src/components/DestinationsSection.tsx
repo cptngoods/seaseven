@@ -103,7 +103,7 @@ export const DestinationsSection = () => {
                   alt={dest.name}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
+
                 />
                 <div className="absolute inset-0 bg-ocean/10 group-hover:bg-transparent transition-colors duration-700" />
               </div>

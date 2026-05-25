@@ -39,7 +39,7 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
                 alt={experience.title}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+
               />
               <div className="absolute inset-0 bg-gradient-to-b from-ocean/40 via-transparent to-linen" />
               
@@ -133,7 +133,7 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
                                         alt={step.location}
                                         loading="lazy"
                                         className="absolute inset-0 w-full h-full object-cover"
-                                        referrerPolicy="no-referrer"
+
                                       />
                                       <div className="absolute inset-0 bg-gradient-to-t from-ocean/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     </div>

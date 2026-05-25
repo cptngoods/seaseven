@@ -36,7 +36,7 @@ export const Hero = () => {
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover scale-110"
-          referrerPolicy="no-referrer"
+
         />
         <div className="absolute inset-0 bg-ocean/40 backdrop-blur-[1px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-ocean/20 via-transparent to-ocean/40" />
