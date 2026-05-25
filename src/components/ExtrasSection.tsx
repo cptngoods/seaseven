@@ -45,13 +45,13 @@ export const ExtrasSection = () => {
   return (
     <section
       id="extras"
-      className="py-40 px-6 bg-ocean text-linen relative overflow-hidden grain-overlay"
+      className="py-28 px-6 bg-ocean text-linen relative overflow-hidden grain-overlay"
     >
       <div className="absolute top-[-15%] right-[-10%] w-[45%] h-[45%] bg-rose/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-seafoam/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-12">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ export const ExtrasSection = () => {
               </span>
             </motion.h2>
           </div>
-          <p className="text-linen/60 max-w-sm text-right font-serif text-xl italic tracking-wide leading-relaxed">
+          <p className="text-linen/70 max-w-sm text-right font-serif text-xl italic tracking-wide leading-relaxed">
             Layer in chefs, bartenders, musicians and more — every extra hand-picked
             from the Tri-City's finest, briefed and managed by our crew.
           </p>
@@ -102,7 +102,7 @@ export const ExtrasSection = () => {
                 <h3 className="text-2xl font-serif italic text-linen mb-3">
                   {extra.name}
                 </h3>
-                <p className="text-linen/60 font-sans text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-linen/70 font-sans text-sm leading-relaxed mb-6 flex-1">
                   {extra.description}
                 </p>
 

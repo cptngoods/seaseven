@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEA · 7 — Charter Inquiry</title>
+<meta name="description" content="Plan your charter aboard M/Y SEA SEVEN — luxury yacht charters in Sopot, Gdańsk & Gdynia." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&family=Italiana&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #002B49;
+    --ocean-2: #001F36;
+    --linen: #F4F9FF;
+    --paper-2: #f7fafd;
+    --line: #e3e8ef;
+    --muted: #6b7488;
+    --text: #1b2542;
+    --rose: #005B96;
+    --rose-2: #00457a;
+    --sage: #6497B1;
+    --seafoam: #00A8CC;
+    --gold: #C9A878;
+    --gold-soft: #e0c89a;
+    --shadow: 0 14px 36px rgba(0, 43, 73, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--ocean-2);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  .app {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    height: 100vh;
+    background: #fff;
+  }
+
+  /* ===================================
+     LEFT BRAND PANEL
+     =================================== */
+  .brand {
+    position: relative;
+    color: var(--linen);
+    padding: 40px 40px 32px;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(0, 31, 54, 0.75) 0%, rgba(0, 31, 54, 0.94) 100%),
+      url('https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+  }
+  .brand::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(120% 60% at 0% 0%, rgba(0, 168, 204, 0.16), transparent 60%);
+    pointer-events: none;
+  }
+  .brand > * { position: relative; z-index: 1; }
+
+  .logo-text {
+    font-family: 'Italiana', serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.45em;
+    line-height: 1;
+    color: var(--linen);
+    margin-bottom: 36px;
+  }
+  .logo-text .dot { color: var(--gold-soft); margin: 0 6px; }
+  .logo-text small {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: var(--gold-soft);
+    margin-top: 10px;
+    font-weight: 500;
+    padding-left: 2px;
+  }
+
+  .brand h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.05;
+    margin: 0 0 16px;
+    letter-spacing: -0.5px;
+  }
+  .brand h1 em {
+    font-style: italic;
+    color: var(--gold-soft);
+    font-weight: 500;
+  }
+  .brand .lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(244, 249, 255, 0.78);
+    margin: 0 0 32px;
+  }
+
+  .selections {
+    margin-top: auto;
+    border-top: 1px solid rgba(244, 249, 255, 0.14);
+    padding-top: 24px;
+  }
+  .selections h2 {
+    margin: 0 0 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold-soft);
+  }
+  .selection-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(244, 249, 255, 0.08);
+  }
+  .selection-row:last-of-type { border-bottom: none; }
+  .selection-row .k {
+    color: rgba(244, 249, 255, 0.55);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 9px;
+  }
+  .selection-row .v {
+    color: var(--linen);
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 60%;
+  }
+  .selection-row .v.empty { color: rgba(244, 249, 255, 0.30); font-style: normal; }
+
+  .brand .footnote {
+    margin-top: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(244, 249, 255, 0.45);
+    line-height: 1.55;
+  }
+
+  /* ===================================
+     RIGHT STAGE
+     =================================== */
+  .stage {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .progress-wrap {
+    padding: 28px 60px 0;
+    position: relative;
+  }
+  .progress-track {
+    height: 3px;
+    background: #eef0f6;
+    border-radius: 999px;
+    overflow: visible;
+    position: relative;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rose), var(--seafoam));
+    border-radius: 999px;
+    width: 0%;
+    transition: width 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .progress-pill {
+    position: absolute;
+    top: 14px;
+    transform: translateX(-50%);
+    background: var(--ocean);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: left 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .progress-pill::after {
+    content: "";
+    position: absolute;
+    left: 50%; top: -4px;
+    transform: translateX(-50%) rotate(45deg);
+    width: 7px; height: 7px;
+    background: var(--ocean);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--ocean);
+    display: grid; place-items: center;
+    transition: background 150ms;
+  }
+  .close-btn:hover { background: var(--paper-2); }
+
+  .scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 60px 60px 28px;
+  }
+
+  .step {
+    max-width: 960px;
+    margin: 0 auto;
+    display: none;
+    animation: fade .4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .step.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  .q-eyebrow {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin: 0 0 14px;
+  }
+  .q-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.1;
+    color: var(--ocean);
+    margin: 0 0 14px;
+    letter-spacing: -0.5px;
+  }
+  .q-title em {
+    font-style: italic;
+    color: var(--rose);
+    font-weight: 500;
+  }
+  .q-desc {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0 auto 40px;
+    max-width: 620px;
+  }
+
+  /* ===================================
+     PICTURE GRID
+     =================================== */
+  .picgrid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .picgrid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .picgrid.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
+
+  .pic {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: var(--paper-2);
+    aspect-ratio: 4 / 3;
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), border-color 220ms, box-shadow 220ms;
+  }
+  .pic:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pic .label {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 12px 14px 11px;
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 31, 54, 0.90) 100%);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .pic .price {
+    position: absolute;
+    top: 10px; left: 10px;
+    padding: 4px 9px;
+    background: rgba(0, 43, 73, 0.78);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+  .pic .duration {
+    position: absolute;
+    top: 10px; right: 10px;
+    padding: 4px 9px;
+    background: rgba(244, 249, 255, 0.12);
+    backdrop-filter: blur(8px);
+    color: var(--linen);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1px solid rgba(244, 249, 255, 0.2);
+  }
+  .pic .check {
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    display: grid; place-items: center;
+    opacity: 0;
+    transform: scale(.7);
+    transition: all 220ms;
+    color: var(--rose);
+  }
+  .pic.selected {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 4px rgba(0, 91, 150, 0.18);
+  }
+  .pic.selected .check { opacity: 1; transform: scale(1); background: var(--rose); color: #fff; }
+  .pic.selected .duration { display: none; }
+
+  /* ===================================
+     ICON GRID (add-ons)
+     =================================== */
+  .iconcard {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid var(--line);
+    background: var(--paper-2);
+    padding: 22px 16px 18px;
+    text-align: center;
+    transition: all 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    aspect-ratio: 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .iconcard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--sage); }
+  .iconcard .ic-icon {
+    width: 52px; height: 52px;
+    margin: 4px auto 0;
+    border-radius: 14px;
+    background: rgba(0, 91, 150, 0.08);
+    display: grid; place-items: center;
+    color: var(--rose);
+    transition: all 220ms;
+  }
+  .iconcard .ic-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--ocean);
+    margin: 6px 0 4px;
+    line-height: 1.2;
+  }
+  .iconcard .ic-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .iconcard .check {
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--paper-2);
+    border: 1.5px solid var(--line);
+    display: grid; place-items: center;
+    color: transparent;
+    transition: all 220ms;
+  }
+  .iconcard.selected {
+    border-color: var(--rose);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 91, 150, 0.12);
+  }
+  .iconcard.selected .ic-icon { background: var(--rose); color: #fff; }
+  .iconcard.selected .check { background: var(--rose); border-color: var(--rose); color: #fff; }
+  .iconcard.selected .ic-price { color: var(--rose); }
+
+  /* ===================================
+     CHOICE BUTTONS
+     =================================== */
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 22px;
+    background: var(--paper-2);
+    border: 1.5px solid var(--line);
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ocean);
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .choice:hover { border-color: var(--rose); background: #fff; transform: translateY(-1px); }
+  .choice.selected {
+    background: var(--ocean);
+    color: var(--linen);
+    border-color: var(--ocean);
+  }
+
+  /* ===================================
+     NUMBER STEPPER
+     =================================== */
+  .number-wrap {
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .number-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 14px;
+  }
+  .stepper-btn {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid var(--line);
+    background: #fff;
+    font-size: 24px;
+    color: var(--ocean);
+    cursor: pointer;
+    transition: all 180ms;
+  }
+  .stepper-btn:hover { border-color: var(--rose); color: var(--rose); }
+  .stepper-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .stepper-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    font-weight: 600;
+    color: var(--ocean);
+    min-width: 110px;
+    line-height: 1;
+  }
+  .stepper-hint {
+    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ===================================
+     TEXTAREA
+     =================================== */
+  .textarea-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .textarea-wrap textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 18px 20px;
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ocean);
+    background: var(--paper-2);
+    resize: vertical;
+    transition: border-color 180ms;
+  }
+  .textarea-wrap textarea:focus { outline: none; border-color: var(--rose); background: #fff; }
+  .textarea-wrap textarea::placeholder { color: var(--muted); }
+
+  /* ===================================
+     CONTACT FORM
+     =================================== */
+  .contact-grid {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .field { display: flex; flex-direction: column; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .field input, .field select {
+    padding: 14px 16px;
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--ocean);
+    background: #fff;
+    transition: border-color 180ms;
+  }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--rose); }
+  .consent {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-top: 4px;
+  }
+  .consent input { margin-top: 4px; accent-color: var(--rose); flex-shrink: 0; }
+  .consent a { color: var(--rose); text-decoration: underline; }
+
+  /* ===================================
+     WELCOME
+     =================================== */
+  .welcome {
+    text-align: center;
+    padding: 40px 0;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .welcome .ornament {
+    width: 60px; height: 1px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+  }
+  .welcome h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+    color: var(--ocean);
+    letter-spacing: -1px;
+  }
+  .welcome h1 em {
+    font-style: italic;
+    color: var(--rose);
+    font-weight: 500;
+  }
+  .welcome p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  .welcome .meta {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .welcome .meta span b { color: var(--ocean); font-weight: 700; font-size: 12px; }
+
+  /* ===================================
+     FOOTER NAV
+     =================================== */
+  .footer {
+    border-top: 1px solid var(--line);
+    background: var(--paper-2);
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-hint {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .nav-buttons { display: flex; gap: 10px; }
+  .btn {
+    padding: 13px 30px;
+    border-radius: 999px;
+    border: 1.5px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.22, 1, 0.36, 1);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--ocean);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover { border-color: var(--ocean); }
+  .btn-primary {
+    background: linear-gradient(90deg, var(--ocean), var(--rose));
+    color: var(--linen);
+    background-size: 200% auto;
+    background-position: 0% 50%;
+  }
+  .btn-primary:hover { background-position: 100% 50%; }
+  .btn-primary:disabled, .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .btn-primary:disabled:hover { background-position: 0% 50%; }
+
+  /* ===================================
+     THANK YOU
+     =================================== */
+  .thanks {
+    text-align: center;
+    padding: 60px 0;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .thanks .ornament {
+    width: 60px; height: 1px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+  }
+  .thanks h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 500;
+    margin: 0 0 18px;
+    color: var(--ocean);
+    letter-spacing: -0.5px;
+  }
+  .thanks h1 em { font-style: italic; color: var(--rose); }
+  .thanks p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .thanks .reply-promise {
+    margin-top: 40px;
+    padding: 18px 26px;
+    background: var(--paper-2);
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ocean);
+    font-weight: 600;
+  }
+  .thanks .reply-promise svg { color: var(--rose); }
+
+  /* ===================================
+     SCROLLBAR
+     =================================== */
+  .scroll::-webkit-scrollbar { width: 8px; }
+  .scroll::-webkit-scrollbar-thumb { background: #d6dce4; border-radius: 4px; }
+  .scroll::-webkit-scrollbar-track { background: transparent; }
+
+  /* ===================================
+     RESPONSIVE
+     =================================== */
+  @media (max-width: 1024px) {
+    .app { grid-template-columns: 340px 1fr; }
+    .scroll { padding: 48px 36px 24px; }
+    .progress-wrap { padding: 24px 36px 0; }
+    .footer { padding: 16px 36px; }
+    .picgrid { grid-template-columns: repeat(3, 1fr); }
+    .picgrid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    body { overflow: auto; }
+    .app { grid-template-columns: 1fr; height: auto; min-height: 100vh; }
+    .brand { padding: 28px; }
+    .selections { display: none; }
+    .scroll { padding: 40px 22px; }
+    .footer { padding: 14px 22px; }
+    .progress-wrap { padding: 20px 22px 0; }
+    .q-title { font-size: 30px; }
+    .welcome h1 { font-size: 38px; }
+    .picgrid, .picgrid.cols-3, .picgrid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    .welcome .meta { flex-direction: column; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- LEFT BRAND PANEL -->
+  <aside class="brand">
+    <div class="logo-text">
+      SEA<span class="dot">·</span>7
+      <small>ADMIRAL 27M · BAY OF GDAŃSK</small>
+    </div>
+
+    <h1>Begin your <em>voyage.</em></h1>
+    <p class="lede">
+      Tell us about your charter — the trip, the guests, the touches that matter — and our crew will craft a tailored proposal within 24 hours.
+    </p>
+
+    <div class="selections">
+      <h2>Your Brief</h2>
+      <div class="selection-row">
+        <span class="k">Trip</span>
+        <span class="v empty" data-summary="tripType">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">Experience</span>
+        <span class="v empty" data-summary="experience">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">Departure</span>
+        <span class="v empty" data-summary="departure">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">When</span>
+        <span class="v empty" data-summary="when">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">Guests</span>
+        <span class="v empty" data-summary="guests">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">Add-ons</span>
+        <span class="v empty" data-summary="addons">—</span>
+      </div>
+      <div class="selection-row">
+        <span class="k">Budget</span>
+        <span class="v empty" data-summary="budget">—</span>
+      </div>
+      <p class="footnote">All selections are private. A Sea Seven concierge will be in touch within 24 hours.</p>
+    </div>
+  </aside>
+
+  <!-- RIGHT STAGE -->
+  <main class="stage">
+    <div class="progress-wrap">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-pill" id="progressPill" style="left:0%">0%</div>
+      <a href="/" class="close-btn" title="Back to site" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </a>
+    </div>
+
+    <div class="scroll" id="scroll">
+
+      <!-- STEP 0: WELCOME -->
+      <section class="step active" data-step="0">
+        <div class="welcome">
+          <div class="ornament"></div>
+          <h1>Welcome aboard <em>SEA·7.</em></h1>
+          <p>
+            From sunset cruises off the Sopot Pier to multi-day events across the Bay of Gdańsk — this short questionnaire is how every charter begins. Around three minutes.
+          </p>
+          <div class="meta">
+            <span><b>~3 min</b> · to complete</span>
+            <span><b>24 h</b> · reply window</span>
+            <span><b>0 €</b> · no obligation</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 1: TRIP TYPE -->
+      <section class="step" data-step="1">
+        <p class="q-eyebrow">Step 1</p>
+        <h2 class="q-title">What kind of <em>charter</em> are you planning?</h2>
+        <p class="q-desc">A few hours on the bay, a private event, or something larger? Pick one to start.</p>
+        <div class="picgrid cols-3" id="grid-tripType"></div>
+      </section>
+
+      <!-- STEP 2: EXPERIENCE -->
+      <section class="step" data-step="2">
+        <p class="q-eyebrow">Step 2</p>
+        <h2 class="q-title">Which <em>experiences</em> appeal to you?</h2>
+        <p class="q-desc">Pick one or several — our crew will shape a proposal around them. Skip if you'd rather build something custom.</p>
+        <div class="picgrid cols-3" id="grid-experience"></div>
+      </section>
+
+      <!-- STEP 3: DEPARTURE -->
+      <section class="step" data-step="3">
+        <p class="q-eyebrow">Step 3</p>
+        <h2 class="q-title">Preferred <em>departure</em> port?</h2>
+        <p class="q-desc">Sea Seven home-ports in Marina Gdynia. We can also collect you from Sopot or Marina Gdańsk on request.</p>
+        <div class="choices" id="choices-departure"></div>
+      </section>
+
+      <!-- STEP 4: WHEN -->
+      <section class="step" data-step="4">
+        <p class="q-eyebrow">Step 4</p>
+        <h2 class="q-title">When would you like to <em>set sail</em>?</h2>
+        <p class="q-desc">Our charter season runs June through September. Tell us your window — we'll match availability.</p>
+        <div class="choices" id="choices-when"></div>
+      </section>
+
+      <!-- STEP 5: GUESTS -->
+      <section class="step" data-step="5">
+        <p class="q-eyebrow">Step 5</p>
+        <h2 class="q-title">How many <em>guests</em> on board?</h2>
+        <p class="q-desc">Sea Seven accommodates up to 16 guests across 4 cabins, with three crew on hand.</p>
+        <div class="number-wrap">
+          <div class="number-stepper">
+            <button class="stepper-btn" id="guestMinus">−</button>
+            <div class="stepper-val" id="guestVal">2</div>
+            <button class="stepper-btn" id="guestPlus">+</button>
+          </div>
+          <p class="stepper-hint">Up to 16 guests</p>
+        </div>
+      </section>
+
+      <!-- STEP 6: DURATION -->
+      <section class="step" data-step="6">
+        <p class="q-eyebrow">Step 6</p>
+        <h2 class="q-title">How <em>long</em> will the charter run?</h2>
+        <p class="q-desc">From a 3-hour sundowner to multi-day journeys around the bay.</p>
+        <div class="choices" id="choices-duration"></div>
+      </section>
+
+      <!-- STEP 7: ADD-ONS -->
+      <section class="step" data-step="7">
+        <p class="q-eyebrow">Step 7</p>
+        <h2 class="q-title">Add-ons to <em>elevate</em> the experience?</h2>
+        <p class="q-desc">Hand-picked from the Tri-City's finest, briefed and managed by our crew. Optional — skip if none apply.</p>
+        <div class="picgrid" id="grid-addons"></div>
+      </section>
+
+      <!-- STEP 8: BUDGET -->
+      <section class="step" data-step="8">
+        <p class="q-eyebrow">Step 8</p>
+        <h2 class="q-title">Indicative <em>budget</em>?</h2>
+        <p class="q-desc">A rough range helps us scale the proposal. Extras and bespoke arrangements are invoiced separately.</p>
+        <div class="choices" id="choices-budget"></div>
+      </section>
+
+      <!-- STEP 9: COMMENTS -->
+      <section class="step" data-step="9">
+        <p class="q-eyebrow">Step 9</p>
+        <h2 class="q-title">Anything else to <em>share</em>?</h2>
+        <p class="q-desc">Special occasion, dietary needs, accessibility, must-see ports, theme ideas — anything that helps us tailor the day.</p>
+        <div class="textarea-wrap">
+          <textarea id="comments" placeholder="Optional message to our charter team…"></textarea>
+        </div>
+      </section>
+
+      <!-- STEP 10: CONTACT -->
+      <section class="step" data-step="10">
+        <p class="q-eyebrow">Step 10 — final</p>
+        <h2 class="q-title">How shall we <em>reach you</em>?</h2>
+        <p class="q-desc">You are one step away from your tailored proposal. A reply within 24 hours.</p>
+        <div class="contact-grid">
+          <div class="field">
+            <label>Title</label>
+            <select id="title">
+              <option>Mr</option><option>Mrs</option><option>Ms</option><option>Dr</option><option>Prefer not to say</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>First Name *</label>
+            <input id="firstName" type="text" placeholder="First name" />
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input id="lastName" type="text" placeholder="Last name" />
+          </div>
+          <div class="field">
+            <label>Email *</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input id="phone" type="tel" placeholder="+48 555 0100" />
+          </div>
+          <div class="field">
+            <label>Preferred contact method</label>
+            <select id="contactMethod">
+              <option>Email</option>
+              <option>Phone call</option>
+              <option>WhatsApp</option>
+              <option>Either</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Best time to reach you</label>
+            <select id="reachTime">
+              <option>Any time</option>
+              <option>Morning (9–12)</option>
+              <option>Afternoon (12–17)</option>
+              <option>Evening (17–20)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>How did you find us?</label>
+            <select id="source">
+              <option>Search engine</option>
+              <option>Social media</option>
+              <option>Referral / word of mouth</option>
+              <option>Press / blog</option>
+              <option>Concierge / broker</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="consent">
+            <input type="checkbox" id="consent" />
+            <label for="consent">I consent to being contacted by Sea Seven about my charter inquiry. See our <a href="/">Privacy Policy</a>.</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- STEP 11: THANK YOU -->
+      <section class="step" data-step="11">
+        <div class="thanks">
+          <div class="ornament"></div>
+          <h1>Bon <em>voyage</em> awaits.</h1>
+          <p>Thank you — your brief has been received. A Sea Seven concierge will be in touch within 24 hours with a tailored proposal.</p>
+          <div class="reply-promise">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Brief received · 24-hour reply window
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="footer">
+      <span class="nav-hint" id="navHint">Welcome</span>
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" id="prevBtn">← Back</button>
+        <button class="btn btn-primary" id="nextBtn">Begin →</button>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script>
+  // ============================================================
+  // SEA · 7 — Charter Inquiry · Data (mirrors src/constants.ts)
+  // ============================================================
+
+  const TRIP_TYPES = [
+    { label: "Day Charter",     img: "https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg" },
+    { label: "Private Event",   img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg" },
+    { label: "Multi-Day Custom", img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-2.jpg" }
+  ];
+
+  const EXPERIENCES = [
+    // Day Charters
+    { id: "sopot-sunset",        label: "Sopot Sunset Cruise",      price: "€1,800",     duration: "4 h",        img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg" },
+    { id: "gdansk-motlawa",      label: "Gdańsk Old Town Cruise",   price: "€1,400",     duration: "3 – 6 h",    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg/1280px-Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg" },
+    { id: "hel-adventure",       label: "Hel Peninsula Escape",     price: "€3,200",     duration: "8 h",        img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-2.jpg" },
+    // Private Events
+    { id: "corporate-event",     label: "Corporate & Client Event", price: "€4,500",     duration: "Half/Full",  img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg" },
+    { id: "wedding-at-sea",      label: "Wedding at Sea",           price: "€6,500",     duration: "6 h",        img: "https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg" },
+    { id: "milestone-birthday",  label: "Milestone Birthday",       price: "€3,800",     duration: "5 h",        img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg" },
+    { id: "stag-hen",            label: "Bachelor / Bachelorette",  price: "€4,200",     duration: "6 h",        img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-2.jpg" },
+    { id: "proposal-anniversary",label: "Proposal & Anniversary",   price: "€2,800",     duration: "3 h",        img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-4.jpg" },
+    { id: "production-rental",   label: "Film & Photo Production",  price: "€5,500/d",   duration: "Per day",    img: "https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg" }
+  ];
+
+  const ADDONS = [
+    { id: "private-chef",    label: "Private Chef",       price: "from €650",   icon: 'M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z|M6 17h12' },
+    { id: "content-creator", label: "Content Creator",    price: "from €800",   icon: 'M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z|M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z' },
+    { id: "bartender",       label: "Craft Bartender",    price: "from €450",   icon: 'M8 22h8|M12 11v11|M19 3H5l7 8 7-8z' },
+    { id: "dj",              label: "DJ Set",             price: "from €700",   icon: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z|M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z|M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' },
+    { id: "dj-sax",          label: "DJ + Live Sax",      price: "from €1,400", icon: 'M9 18V5l12-2v13|M9 9l12-2|M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0z|M21 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z' },
+    { id: "sommelier",       label: "Sommelier Pairing",  price: "from €550",   icon: 'M8 22h8|M7 10h10|M12 15v7|M17 2H7l1 8a4 4 0 0 0 8 0z' },
+    { id: "florist",         label: "Floral Styling",     price: "from €350",   icon: 'M12 22V12|M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z|M12 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0z|M12 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0z' },
+    { id: "wellness",        label: "Onboard Wellness",   price: "from €400",   icon: 'M12 3l1.9 5.8H20l-5 3.6 1.9 5.8L12 14.6l-4.9 3.6L9 12.4 4 8.8h6.1z' }
+  ];
+
+  const DEPARTURE_OPTIONS = ["Marina Gdynia (home port)", "Sopot Pier", "Marina Gdańsk", "Flexible / Let crew advise"];
+  const WHEN_OPTIONS      = ["Summer 2026 (Jun–Sep)", "Late Season 2026 (Sep–Oct)", "Summer 2027", "Specific date in mind", "Flexible / Open"];
+  const DURATION_OPTIONS  = ["3 hours (sundowner)", "Half day (5 h)", "Full day (8 h)", "Multi-day cruise", "Not sure yet"];
+  const BUDGET_OPTIONS    = ["Under €2,000", "€2,000 – €5,000", "€5,000 – €10,000", "€10,000 – €20,000", "€20,000 +", "Prefer to discuss"];
+
+  // ============================================================
+  // STATE
+  // ============================================================
+  const state = {
+    tripType: null,
+    experience: new Set(),
+    departure: null,
+    when: null,
+    guests: 2,
+    duration: null,
+    addons: new Set(),
+    budget: null,
+    comments: "",
+    contact: {}
+  };
+
+  const TOTAL_STEPS = 11; // 0..11 inclusive
+  let current = 0;
+
+  // ============================================================
+  // RENDERERS
+  // ============================================================
+  function renderPicGrid(containerId, items, stateKey, multi = true, showDuration = false) {
+    const grid = document.getElementById(containerId);
+    grid.innerHTML = "";
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "pic";
+      const priceHtml    = item.price    ? `<div class="price">${item.price}</div>`       : "";
+      const durationHtml = showDuration && item.duration ? `<div class="duration">${item.duration}</div>` : "";
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.label}" loading="lazy" />
+        ${priceHtml}
+        ${durationHtml}
+        <div class="check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="label">${item.label}</div>`;
+      card.addEventListener("click", () => {
+        const key = item.id || item.label;
+        if (multi) {
+          const set = state[stateKey];
+          if (set.has(key)) set.delete(key);
+          else set.add(key);
+          card.classList.toggle("selected", set.has(key));
+        } else {
+          state[stateKey] = item.label;
+          grid.querySelectorAll(".pic").forEach(p => p.classList.remove("selected"));
+          card.classList.add("selected");
+        }
+        updateSummary();
+        updateNav();
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  function renderIconGrid(containerId, items, stateKey) {
+    const grid = document.getElementById(containerId);
+    grid.innerHTML = "";
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "iconcard";
+      const paths = item.icon.split('|').map(d => `<path d="${d}"/>`).join('');
+      card.innerHTML = `
+        <div class="check">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="ic-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>
+        </div>
+        <div>
+          <div class="ic-name">${item.label}</div>
+          <div class="ic-price">${item.price}</div>
+        </div>`;
+      card.addEventListener("click", () => {
+        const set = state[stateKey];
+        if (set.has(item.id)) set.delete(item.id);
+        else set.add(item.id);
+        card.classList.toggle("selected", set.has(item.id));
+        updateSummary();
+        updateNav();
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  function renderChoices(containerId, options, stateKey) {
+    const wrap = document.getElementById(containerId);
+    wrap.innerHTML = "";
+    options.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.className = "choice";
+      btn.textContent = opt;
+      btn.addEventListener("click", () => {
+        state[stateKey] = opt;
+        wrap.querySelectorAll(".choice").forEach(c => c.classList.remove("selected"));
+        btn.classList.add("selected");
+        updateSummary();
+        updateNav();
+      });
+      wrap.appendChild(btn);
+    });
+  }
+
+  // ============================================================
+  // INIT UI
+  // ============================================================
+  renderPicGrid("grid-tripType",   TRIP_TYPES,   "tripType",   false);
+  renderPicGrid("grid-experience", EXPERIENCES,  "experience", true,  true);
+  renderIconGrid("grid-addons",    ADDONS,       "addons");
+  renderChoices("choices-departure", DEPARTURE_OPTIONS, "departure");
+  renderChoices("choices-when",      WHEN_OPTIONS,      "when");
+  renderChoices("choices-duration",  DURATION_OPTIONS,  "duration");
+  renderChoices("choices-budget",    BUDGET_OPTIONS,    "budget");
+
+  // Guest stepper
+  const guestVal     = document.getElementById("guestVal");
+  const guestMinus   = document.getElementById("guestMinus");
+  const guestPlus    = document.getElementById("guestPlus");
+  function updateGuestButtons() {
+    guestMinus.disabled = state.guests <= 1;
+    guestPlus.disabled  = state.guests >= 16;
+  }
+  guestMinus.addEventListener("click", () => {
+    if (state.guests > 1) {
+      state.guests--;
+      guestVal.textContent = state.guests;
+      updateGuestButtons();
+      updateSummary();
+    }
+  });
+  guestPlus.addEventListener("click", () => {
+    if (state.guests < 16) {
+      state.guests++;
+      guestVal.textContent = state.guests;
+      updateGuestButtons();
+      updateSummary();
+    }
+  });
+  updateGuestButtons();
+
+  document.getElementById("comments").addEventListener("input", e => state.comments = e.target.value);
+
+  // ============================================================
+  // NAVIGATION
+  // ============================================================
+  const prevBtn      = document.getElementById("prevBtn");
+  const nextBtn      = document.getElementById("nextBtn");
+  const navHint      = document.getElementById("navHint");
+  const progressFill = document.getElementById("progressFill");
+  const progressPill = document.getElementById("progressPill");
+
+  function updateProgress() {
+    const pct = Math.round((current / TOTAL_STEPS) * 100);
+    progressFill.style.width = pct + "%";
+    progressPill.style.left = pct + "%";
+    progressPill.textContent = pct + "%";
+  }
+
+  function showStep(n) {
+    document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+    const el = document.querySelector(`.step[data-step="${n}"]`);
+    if (el) el.classList.add("active");
+    document.getElementById("scroll").scrollTop = 0;
+    current = n;
+
+    if (n === 0) {
+      navHint.textContent = "Welcome";
+      prevBtn.style.visibility = "hidden";
+      nextBtn.textContent = "Begin →";
+    } else if (n === TOTAL_STEPS) {
+      navHint.textContent = "Submission complete";
+      prevBtn.style.visibility = "hidden";
+      nextBtn.style.display = "none";
+    } else {
+      navHint.textContent = `Step ${n} of ${TOTAL_STEPS - 1}`;
+      prevBtn.style.visibility = "visible";
+      nextBtn.style.display = "";
+      nextBtn.textContent = (n === TOTAL_STEPS - 1) ? "Send Inquiry →" : "Next →";
+    }
+
+    updateProgress();
+    updateNav();
+  }
+
+  function canAdvance() {
+    switch (current) {
+      case 0: return true;
+      case 1: return !!state.tripType;
+      case 2: return true; // experience optional
+      case 3: return !!state.departure;
+      case 4: return !!state.when;
+      case 5: return state.guests >= 1;
+      case 6: return !!state.duration;
+      case 7: return true; // add-ons optional
+      case 8: return !!state.budget;
+      case 9: return true;
+      case 10: {
+        const fn = document.getElementById("firstName").value.trim();
+        const em = document.getElementById("email").value.trim();
+        const cs = document.getElementById("consent").checked;
+        return fn.length > 0 && /\S+@\S+\.\S+/.test(em) && cs;
+      }
+      default: return true;
+    }
+  }
+  function updateNav() {
+    nextBtn.disabled = !canAdvance();
+  }
+  ["firstName", "email", "consent"].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener("input", updateNav);
+    el.addEventListener("change", updateNav);
+  });
+
+  prevBtn.addEventListener("click", () => { if (current > 0) showStep(current - 1); });
+  nextBtn.addEventListener("click", () => {
+    if (current < TOTAL_STEPS) {
+      if (current === 10) {
+        state.contact = {
+          title:         document.getElementById("title").value,
+          firstName:     document.getElementById("firstName").value.trim(),
+          lastName:      document.getElementById("lastName").value.trim(),
+          email:         document.getElementById("email").value.trim(),
+          phone:         document.getElementById("phone").value.trim(),
+          contactMethod: document.getElementById("contactMethod").value,
+          reachTime:     document.getElementById("reachTime").value,
+          source:        document.getElementById("source").value
+        };
+        const payload = {
+          ...state,
+          experience: [...state.experience],
+          addons:     [...state.addons],
+          submittedAt: new Date().toISOString()
+        };
+        console.log("Sea Seven inquiry:", JSON.stringify(payload, null, 2));
+        // TODO: POST to n8n webhook when configured:
+        // fetch(import.meta.env.VITE_N8N_WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      }
+      showStep(current + 1);
+    }
+  });
+
+  // ============================================================
+  // SUMMARY
+  // ============================================================
+  function joinIdsToLabels(set, source) {
+    return [...set].map(id => {
+      const found = source.find(x => (x.id || x.label) === id);
+      return found ? found.label : id;
+    }).join(", ");
+  }
+  function updateSummary() {
+    const map = {
+      tripType:   state.tripType || "",
+      experience: state.experience.size ? joinIdsToLabels(state.experience, EXPERIENCES) : "",
+      departure:  state.departure || "",
+      when:       state.when || "",
+      guests:     state.guests ? `${state.guests} guest${state.guests > 1 ? "s" : ""}` : "",
+      addons:     state.addons.size ? joinIdsToLabels(state.addons, ADDONS) : "",
+      budget:     state.budget || ""
+    };
+    Object.entries(map).forEach(([k, v]) => {
+      const el = document.querySelector(`[data-summary="${k}"]`);
+      if (!el) return;
+      if (v) { el.textContent = v; el.classList.remove("empty"); }
+      else { el.textContent = "—"; el.classList.add("empty"); }
+    });
+  }
+
+  // ============================================================
+  // INIT
+  // ============================================================
+  showStep(0);
+</script>
+
+</body>
+</html>

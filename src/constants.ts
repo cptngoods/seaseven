@@ -100,17 +100,18 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 'gdansk-motlawa',
-    title: 'Gdańsk Motława Tour',
-    description: "A cinematic voyage through the heart of historic Gdańsk. Glide along the Motława river past the medieval Crane (Żuraw), the Granaries on Spichlerze Island, and the colourful façades of Długie Pobrzeże — all from the teak deck of Sea Seven. A short, sophisticated escape into a thousand years of Hanseatic history.",
+    title: 'Gdańsk Old Town Cruise',
+    description: "Glide along the historic Motława river into the heart of medieval Gdańsk — past the iconic Crane (Żuraw), the Granaries on Spichlerze Island, and the painted façades of Długie Pobrzeże. Choose a three-hour cinematic sundowner with prosecco at Westerplatte, or extend to a full six-hour day with a private guided walk through the Old Town.",
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg/1280px-Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg',
     type: 'day',
     priceFrom: '€1,400',
-    duration: '3 Hours',
+    duration: '3 – 6 Hours',
     routes: [
-      '14:00 - Departure from Marina Gdańsk',
-      '14:30 - Cruise past the Crane (Żuraw) & Old Town',
-      '15:30 - Anchor near Westerplatte with prosecco service',
-      '17:00 - Return upriver to Długie Pobrzeże'
+      'Departure from Marina Gdańsk or Marina Gdynia',
+      'Cruise past the Crane (Żuraw) & Długie Pobrzeże',
+      'Anchor near Westerplatte with prosecco service',
+      'Optional · private guided Old Town walk (+3 h, from €2,400)',
+      'Return upriver under the lights of the Tri-City'
     ],
     itinerary: [
       {
@@ -118,7 +119,7 @@ export const EXPERIENCES: Experience[] = [
         highlight: 'Welcome aboard at the foot of the Old Town.',
         tags: ['Old Town', 'Welcome'],
         image: 'https://images.unsplash.com/photo-1565018900183-9e45f5164d7d?auto=format&fit=crop&q=80&w=1920',
-        extendedDescription: 'Board Sea Seven directly in the heart of Gdańsk, with the spires of St. Mary\'s rising above the medieval skyline. Our crew greets you with chilled prosecco and Pomeranian canapés.'
+        extendedDescription: 'Board Sea Seven directly in the heart of Gdańsk, with the spires of St. Mary\'s rising above the medieval skyline. Our crew greets you with chilled prosecco and Pomeranian canapés. (Pick-up from Marina Gdynia also available for the longer six-hour option.)'
       },
       {
         location: 'The Crane (Żuraw) & Długie Pobrzeże',
@@ -126,6 +127,13 @@ export const EXPERIENCES: Experience[] = [
         tags: ['History', 'Architecture'],
         image: 'https://images.unsplash.com/photo-1590273466070-40c466b4432c?auto=format&fit=crop&q=80&w=1920',
         extendedDescription: 'Glide slowly beneath the iconic wooden Crane, once the largest port crane in medieval Europe, and along the painted gables of Długie Pobrzeże — a view of Gdańsk only seen from the water.'
+      },
+      {
+        location: 'Old Town Walk · optional',
+        highlight: 'A private guided hour ashore.',
+        tags: ['Old Town', 'Optional'],
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
+        extendedDescription: 'On the six-hour itinerary, we tie up at Długie Pobrzeże and a private guide leads you through St. Mary\'s Church, the Royal Way, and the amber workshops before returning to the yacht for the afternoon cruise.'
       },
       {
         location: 'Westerplatte',
@@ -137,35 +145,93 @@ export const EXPERIENCES: Experience[] = [
     ]
   },
   {
-    id: 'gdansk-river',
-    title: 'Gdańsk Old Town River Cruise',
-    description: 'Navigate the historic Motława river into the heart of medieval Gdańsk. Pass the iconic Crane, amber workshops, and Gothic facades before anchoring for a private guided tour of the Old Town.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
-    type: 'day',
-    priceFrom: '€2,400',
-    duration: '6 Hours',
+    id: 'corporate-event',
+    title: 'Corporate & Client Events',
+    description: 'The ultimate setting for product launches, executive retreats and high-touch B2B entertainment. Up to 16 guests, full catering, AV-ready, and a horizon no boardroom can match.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg',
+    type: 'special',
+    priceFrom: '€4,500',
+    duration: 'Half / Full Day',
     routes: [
-      '10:00 - Departure from Marina Gdynia',
-      '11:30 - Enter Motława river approach',
-      '12:00 - Anchor near Żuraw Crane / Old Town',
-      '13:00 - Private guided Old Town walk (optional)',
-      '15:30 - Return cruise via open bay',
-      '17:00 - Return to marina'
+      'Branded welcome & AV setup on flybridge',
+      'Bespoke catering & sommelier-paired wine',
+      'Dedicated crew & event coordinator',
+      'Pick-up from Sopot, Gdańsk or Gdynia'
     ]
   },
   {
-    id: 'corporate-event',
-    title: 'Corporate & Private Events',
-    description: 'The ultimate venue for product launches, client entertainment, or team retreats. SEA SEVEN accommodates up to 16 guests with full catering, AV capability, and a backdrop that no conference room can match.',
+    id: 'wedding-at-sea',
+    title: 'Wedding at Sea',
+    description: 'Intimate ceremonies, vow renewals and post-wedding cruises on the Bay of Gdańsk. From a private exchange of vows under the flybridge canopy to a full sunset reception.',
+    image: 'https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg',
+    type: 'special',
+    priceFrom: '€6,500',
+    duration: '6 Hours',
+    routes: [
+      'Florist & ceremony styling',
+      'Sunset-timed sailing route',
+      'Chef-curated wedding tasting menu',
+      'Photographer & DJ coordination'
+    ]
+  },
+  {
+    id: 'milestone-birthday',
+    title: 'Milestone Birthdays',
+    description: 'Mark the big ones — 30th, 40th, 50th — in a way nobody will forget. Themed décor, custom cake, and an open-bar atmosphere from welcome aboard to last anchor.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg',
+    type: 'special',
+    priceFrom: '€3,800',
+    duration: '5 Hours',
+    routes: [
+      'Themed décor & flower styling',
+      'Custom celebration cake',
+      'Bartender & DJ included',
+      'Champagne service on the foredeck'
+    ]
+  },
+  {
+    id: 'stag-hen',
+    title: 'Bachelor & Bachelorette Party',
+    description: 'High-energy pre-wedding parties with DJ, mixology, and the entire Tri-City skyline as your dance floor. Tasteful enough to remember; private enough to forget.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-2.jpg',
+    type: 'special',
+    priceFrom: '€4,200',
+    duration: '6 Hours',
+    routes: [
+      'Resident DJ set + live sax option',
+      'Craft bartender & cocktail menu',
+      'Branded welcome & party styling',
+      'Late-night return to marina'
+    ]
+  },
+  {
+    id: 'proposal-anniversary',
+    title: 'Proposal & Anniversary',
+    description: 'An intimate, two-guest charter timed to sunset over Sopot. Florals, champagne, and a private photographer to capture the moment — yours forever.',
+    image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-4.jpg',
+    type: 'special',
+    priceFrom: '€2,800',
+    duration: '3 Hours',
+    routes: [
+      'Private two-guest charter',
+      'Floral styling & rose-petal staging',
+      'Premium champagne service',
+      'Discreet photographer (optional)'
+    ]
+  },
+  {
+    id: 'production-rental',
+    title: 'Film & Photo Production',
+    description: 'SEA SEVEN as your floating set — for editorial fashion shoots, music videos and commercials. Full crew on standby, sailing permits handled, and every angle on the bay accessible.',
     image: 'https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg',
     type: 'special',
-    priceFrom: 'POA',
-    duration: 'Flexible',
+    priceFrom: '€5,500 / day',
+    duration: 'Per Day',
     routes: [
-      'Full-day or half-day packages available',
-      'Customised catering and theming',
-      'AV equipment on request',
-      'Pick-up from Sopot, Gdańsk or Gdynia'
+      'Full crew on standby',
+      'Sailing permits & locations handled',
+      'Power & catering for production team',
+      'Flexible scheduling around the light'
     ]
   },
   {

@@ -37,7 +37,7 @@ export const CuisineSection = () => {
       title: t('cuisine.kashubianTitle'),
       desc: t('cuisine.kashubianDesc'),
       icon: Leaf,
-      image: 'https://images.unsplash.com/photo-1542124382-e69a271397bb?auto=format&fit=crop&q=80&w=800'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bigos_%281%29.jpg/1280px-Bigos_%281%29.jpg'
     },
     {
       title: t('cuisine.craftTitle'),
@@ -48,7 +48,7 @@ export const CuisineSection = () => {
   ];
 
   return (
-    <section id="cuisine" className="py-40 bg-linen relative overflow-hidden grain-overlay">
+    <section id="cuisine" className="py-28 bg-linen relative overflow-hidden grain-overlay">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
           <motion.div
@@ -85,7 +85,7 @@ export const CuisineSection = () => {
                 alt="Chef at work"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+
               />
               <div className="absolute inset-0 bg-ocean/10" />
             </div>
@@ -131,7 +131,7 @@ export const CuisineSection = () => {
                   alt={item.title}
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
+
                 />
                 <div className="absolute inset-0 bg-ocean/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

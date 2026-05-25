@@ -103,7 +103,7 @@ export const SocialSection = () => {
                 alt={`Instagram post ${post.id}`}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                referrerPolicy="no-referrer"
+
               />
               
               {/* Overlay */}

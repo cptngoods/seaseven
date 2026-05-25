@@ -99,7 +99,7 @@ export const BookingSection = () => {
   };
 
   return (
-    <section id="inquiry" className="py-40 px-6 bg-gradient-to-tr from-sky/10 via-linen to-sky/5 grain-overlay overflow-hidden">
+    <section id="inquiry" className="py-28 px-6 bg-gradient-to-tr from-sky/10 via-linen to-sky/5 grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-20 items-start">
           <motion.div

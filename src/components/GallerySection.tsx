@@ -58,7 +58,7 @@ export const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-40 px-6 bg-linen grain-overlay overflow-hidden">
+    <section id="gallery" className="py-28 px-6 bg-linen grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12">
           <div className="max-w-2xl">
@@ -153,7 +153,7 @@ export const GallerySection = () => {
                       alt={`SEA SEVEN ${img.category}`}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110 group-hover:rotate-1"
-                      referrerPolicy="no-referrer"
+
                     />
                   </div>
                   
@@ -268,7 +268,7 @@ export const GallerySection = () => {
               src={selectedImage.url}
               alt={`Lagoon 620 ${selectedImage.category}`}
               className="max-w-full max-h-full rounded-[3rem] shadow-2xl object-contain border border-linen/10 pointer-events-none"
-              referrerPolicy="no-referrer"
+
             />
           </motion.div>
         )}

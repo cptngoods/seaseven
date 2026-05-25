@@ -37,12 +37,15 @@ export const Navbar = () => {
       isScrolled ? "glass-nav py-2" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-3 group">
-          <span className={cn(
-            "text-2xl font-display font-bold tracking-[0.2em] uppercase transition-colors duration-500",
-            isScrolled ? "text-ocean" : "text-linen"
-          )}>
-            SEA SEVEN
+        <a href="/" aria-label="SEA · 7 · Home" className="flex items-center gap-3 group">
+          <span
+            className={cn(
+              "text-xl md:text-2xl font-light tracking-[0.45em] uppercase transition-colors duration-500",
+              isScrolled ? "text-ocean" : "text-linen"
+            )}
+            style={{ fontFamily: 'Italiana, ui-serif, Georgia, serif' }}
+          >
+            SEA<span className="mx-2 text-rose opacity-90">·</span>7
           </span>
         </a>
 
@@ -80,7 +83,7 @@ export const Navbar = () => {
           </div>
 
           <a 
-            href="#inquiry"
+            href="/inquiry.html"
             className={cn(
               "px-8 py-3 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 font-display flex items-center justify-center",
               isScrolled 
@@ -88,7 +91,7 @@ export const Navbar = () => {
                 : "bg-linen/10 backdrop-blur-md text-linen border border-linen/30 btn-gradient-animate hover:border-transparent"
             )}
           >
-            {t('nav.inquire')}
+            {t('nav.bookNow')}
           </a>
         </div>
 
@@ -143,11 +146,11 @@ export const Navbar = () => {
               </a>
             ))}
             <a 
-              href="#inquiry"
+              href="/inquiry.html"
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-gradient-animate text-linen py-4 rounded-full text-sm uppercase tracking-widest font-semibold text-center"
             >
-              {t('nav.inquireNow')}
+              {t('nav.bookNow')}
             </a>
           </motion.div>
         )}
@@ -164,7 +167,7 @@ export const WhatsAppButton = () => (
     initial={{ scale: 0, opacity: 0 }}
     animate={{ scale: 1, opacity: 1 }}
     whileHover={{ scale: 1.1 }}
-    className="fixed bottom-8 right-8 z-50 bg-sage text-linen p-5 rounded-full shadow-2xl flex items-center justify-center soft-shadow border border-linen/20 hover:bg-rose transition-colors duration-500"
+    className="fixed bottom-8 right-8 z-50 bg-ocean text-linen p-5 rounded-full shadow-2xl flex items-center justify-center soft-shadow border border-linen/20 hover:bg-rose transition-colors duration-500"
   >
     <MessageCircle className="w-6 h-6" />
   </motion.a>

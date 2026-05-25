@@ -36,11 +36,11 @@ export const CrewSection = () => {
           >
             <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden soft-shadow">
               <img
-                src="https://duoyacht.com/images/gallery/crew/crew%20(1).jpg"
+                src="https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg"
                 alt="Sea Seven Crew"
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+
               />
               <div className="absolute inset-0 bg-ocean/20" />
             </div>
@@ -65,7 +65,7 @@ export const CrewSection = () => {
             </div>
 
             <motion.div variants={itemVariants} className="space-y-8">
-              <p className="text-linen/60 leading-relaxed font-serif text-lg italic max-w-2xl">
+              <p className="text-linen/70 leading-relaxed font-serif text-lg italic max-w-2xl">
                 Your crew — captain, stewardess, and deckhand — are local experts 
                 dedicated to crafting a seamless Baltic experience. From navigating 
                 historic canal approaches to serving gourmet local delicacies at sunset, 
@@ -97,7 +97,7 @@ export const CrewSection = () => {
                         alt={member.role}
                         loading="lazy"
                         className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
+
                       />
                     </div>
                     <div className="space-y-1">

@@ -25,7 +25,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center grain-overlay aurora-bg">
+    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center grain-overlay">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
@@ -36,7 +36,7 @@ export const Hero = () => {
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover scale-110"
-          referrerPolicy="no-referrer"
+
         />
         <div className="absolute inset-0 bg-ocean/40 backdrop-blur-[1px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-ocean/20 via-transparent to-ocean/40" />
@@ -59,7 +59,7 @@ export const Hero = () => {
         
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-8xl lg:text-[8vw] text-linen font-display font-bold leading-[0.85] uppercase tracking-tighter mb-12 text-gradient"
+          className="text-6xl md:text-8xl lg:text-[8vw] text-linen font-display font-bold leading-[0.85] uppercase tracking-tighter mb-12"
         >
           SEA SEVEN
         </motion.h1>

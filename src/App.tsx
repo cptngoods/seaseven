@@ -10,7 +10,6 @@ import { ExtrasSection } from './components/ExtrasSection';
 import { GallerySection } from './components/GallerySection';
 import { BookingSection } from './components/BookingSection';
 import { FAQSection } from './components/FAQSection';
-import { SocialSection } from './components/SocialSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { Footer } from './components/Footer';
 import { SeasonBanner } from './components/SeasonBanner';
@@ -28,7 +27,7 @@ export default function App() {
         <Hero />
         
         {/* Intro Section */}
-        <section className="py-40 px-6 relative overflow-hidden grain-overlay bg-linen">
+        <section className="py-28 px-6 relative overflow-hidden grain-overlay bg-linen">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -44,7 +43,7 @@ export default function App() {
                 height={1500}
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+
               />
               <div className="absolute inset-0 bg-ocean/10" />
             </motion.div>
@@ -125,7 +124,6 @@ export default function App() {
         
         <TestimonialsSection />
         <FAQSection />
-        <SocialSection />
         <BookingSection />
       </main>
 

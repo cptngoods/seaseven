@@ -35,7 +35,7 @@ export const DestinationsSection = () => {
   };
 
   return (
-    <section id="destinations" className="py-40 bg-gradient-to-b from-linen via-sky/20 to-linen overflow-hidden grain-overlay">
+    <section id="destinations" className="py-28 bg-gradient-to-b from-linen via-sky/20 to-linen overflow-hidden grain-overlay">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12">
           <div className="max-w-2xl">
@@ -103,7 +103,7 @@ export const DestinationsSection = () => {
                   alt={dest.name}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
+
                 />
                 <div className="absolute inset-0 bg-ocean/10 group-hover:bg-transparent transition-colors duration-700" />
               </div>
@@ -116,7 +116,7 @@ export const DestinationsSection = () => {
                 </p>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {dest.highlights.slice(0, 2).map((highlight) => (
-                    <span key={highlight} className="px-2 py-0.5 bg-sage/5 text-sage text-[7px] uppercase tracking-widest font-bold rounded-full border border-sage/10 font-display">
+                    <span key={highlight} className="px-3 py-1.5 bg-sage/5 text-sage text-[9px] uppercase tracking-widest font-bold rounded-full border border-sage/10 font-display">
                       {highlight}
                     </span>
                   ))}
