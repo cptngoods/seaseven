@@ -80,7 +80,7 @@ export const ExperiencesSection = () => {
                       alt={exp.title}
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                      referrerPolicy="no-referrer"
+
                     />
                     <div className="absolute inset-0 bg-ocean/20 group-hover:bg-transparent transition-colors duration-700" />
                     
@@ -118,57 +118,100 @@ export const ExperiencesSection = () => {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.05 }}
             >
-              <motion.div variants={itemVariants} className="flex items-center gap-8 mb-16">
-                <h3 className="text-xs uppercase tracking-[0.5em] font-bold text-rose font-display whitespace-nowrap">Private Events</h3>
-                <div className="h-[1px] flex-1 bg-linen/10" />
+              {/* Editorial header */}
+              <motion.div variants={itemVariants} className="text-center mb-20 max-w-3xl mx-auto">
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <div className="h-[1px] w-12 bg-rose/40" />
+                  <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold font-display">Private Events</span>
+                  <div className="h-[1px] w-12 bg-rose/40" />
+                </div>
+                <h3 className="text-5xl md:text-6xl font-display font-bold uppercase tracking-tighter leading-[0.9] mb-6">
+                  Beyond the{' '}
+                  <span className="text-rose font-serif italic lowercase tracking-normal">ordinary.</span>
+                </h3>
+                <p className="text-linen/50 font-serif italic text-lg leading-relaxed">
+                  Six bespoke charter formats — from corporate retreats to weddings under the flybridge canopy. Each one tailored end-to-end by our crew.
+                </p>
               </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-12">
+              {/* Editorial grid */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {EXPERIENCES.filter(exp => exp.type === 'special').map((exp) => (
-                  <motion.div
+                  <motion.button
                     key={exp.id}
                     variants={itemVariants}
-                    className="group relative"
+                    onClick={() => setSelectedExp(exp)}
+                    className="group relative aspect-[3/4] overflow-hidden rounded-[2rem] cursor-pointer text-left soft-shadow focus:outline-none focus:ring-2 focus:ring-rose/60 focus:ring-offset-4 focus:ring-offset-ocean"
                   >
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-[3rem] soft-shadow mb-8">
-                      <img
-                        src={exp.image}
-                        alt={exp.title}
-                        loading="lazy"
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                        referrerPolicy="no-referrer"
-                      />
-                      <div className="absolute inset-0 bg-ocean/20 group-hover:bg-transparent transition-colors duration-700" />
+                    <img
+                      src={exp.image}
+                      alt={exp.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                    />
 
-                      <div className="absolute bottom-8 left-8 right-8">
-                        <button
-                          onClick={() => setSelectedExp(exp)}
-                          className="w-full py-4 bg-linen/10 backdrop-blur-md text-linen border border-linen/20 rounded-2xl font-display font-bold text-[10px] uppercase tracking-widest hover:bg-rose hover:border-rose transition-all duration-500"
-                        >
-                          Explore Details
-                        </button>
-                      </div>
+                    {/* Always-on gradient + price chip */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-ocean via-ocean/40 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+                    <div className="absolute top-5 right-5 z-10">
+                      <span className="px-3 py-1.5 bg-linen/10 backdrop-blur-md text-linen text-[9px] uppercase tracking-[0.25em] font-bold rounded-full font-display border border-linen/20">
+                        {exp.priceFrom}
+                      </span>
                     </div>
 
-                    <div className="px-4 space-y-4">
-                      <div className="flex justify-between items-start">
-                        <h3 className="text-3xl font-serif italic text-linen">{exp.title}</h3>
-                        <span className="text-rose font-sans text-lg">{exp.priceFrom}</span>
-                      </div>
-                      <p className="text-linen/50 font-sans text-sm leading-relaxed line-clamp-2">
-                        {exp.description}
-                      </p>
+                    {/* Default content — title + duration */}
+                    <div className="absolute bottom-0 left-0 right-0 p-7 transition-all duration-500 ease-out group-hover:opacity-0 group-hover:-translate-y-2">
+                      <h3 className="text-3xl font-serif italic text-linen mb-2 leading-tight">{exp.title}</h3>
                       {exp.duration && (
-                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-linen/30 font-bold font-display">
+                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-linen/70 font-bold font-display">
                           <Clock className="w-3 h-3" /> {exp.duration}
                         </div>
                       )}
                     </div>
-                  </motion.div>
+
+                    {/* Hover reveal — full detail */}
+                    <div className="absolute inset-0 bg-ocean/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-7">
+                      <h3 className="text-2xl font-serif italic text-linen mb-1 leading-tight">{exp.title}</h3>
+                      {exp.duration && (
+                        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-linen/50 font-bold font-display mb-5">
+                          <Clock className="w-3 h-3" /> {exp.duration}
+                        </div>
+                      )}
+                      <p className="text-linen/70 font-sans text-[13px] leading-relaxed mb-5 line-clamp-4">
+                        {exp.description}
+                      </p>
+                      {exp.routes && exp.routes.length > 0 && (
+                        <ul className="space-y-1.5 mb-6">
+                          {exp.routes.slice(0, 3).map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 text-[11px] text-linen/60 font-sans leading-relaxed">
+                              <span className="text-rose mt-1 shrink-0 text-base leading-none">·</span>
+                              <span className="line-clamp-1">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      <div className="flex items-center gap-2 text-rose text-[10px] uppercase tracking-[0.3em] font-bold font-display pt-4 border-t border-linen/10">
+                        Explore details <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                      </div>
+                    </div>
+                  </motion.button>
                 ))}
               </div>
+
+              {/* Section CTA */}
+              <motion.div variants={itemVariants} className="mt-20 text-center">
+                <a
+                  href="#inquiry"
+                  className="inline-flex items-center gap-3 px-10 py-5 bg-rose hover:bg-linen text-linen hover:text-ocean rounded-full font-display font-bold text-[11px] uppercase tracking-[0.3em] transition-all duration-500"
+                >
+                  Plan your private event
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <p className="mt-6 text-linen/30 font-serif italic text-sm">
+                  Custom formats also available — tell us what you're imagining.
+                </p>
+              </motion.div>
             </motion.div>
           )}
         </div>

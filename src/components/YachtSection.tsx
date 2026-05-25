@@ -243,7 +243,7 @@ export const YachtSection = () => {
                     alt={VESSEL.detailedFeatures?.[activeFeatureIndex]?.title}
                     loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover"
-                    referrerPolicy="no-referrer"
+
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ocean/40 via-transparent to-transparent" />
                   
@@ -393,7 +393,7 @@ export const YachtSection = () => {
                       alt={WATER_TOYS[activeToyIndex].title}
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
+
                     />
                     
                     {/* Video Preview */}

@@ -84,7 +84,7 @@ export const TestimonialsSection = () => {
                     alt={TESTIMONIALS[currentIndex].author}
                     loading="lazy"
                     className="w-full h-full object-cover rounded-full"
-                    referrerPolicy="no-referrer"
+
                   />
                 </div>
                 <div>
