@@ -100,17 +100,18 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     id: 'gdansk-motlawa',
-    title: 'Gdańsk Motława Tour',
-    description: "A cinematic voyage through the heart of historic Gdańsk. Glide along the Motława river past the medieval Crane (Żuraw), the Granaries on Spichlerze Island, and the colourful façades of Długie Pobrzeże — all from the teak deck of Sea Seven. A short, sophisticated escape into a thousand years of Hanseatic history.",
+    title: 'Gdańsk Old Town Cruise',
+    description: "Glide along the historic Motława river into the heart of medieval Gdańsk — past the iconic Crane (Żuraw), the Granaries on Spichlerze Island, and the painted façades of Długie Pobrzeże. Choose a three-hour cinematic sundowner with prosecco at Westerplatte, or extend to a full six-hour day with a private guided walk through the Old Town.",
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg/1280px-Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg',
     type: 'day',
     priceFrom: '€1,400',
-    duration: '3 Hours',
+    duration: '3 – 6 Hours',
     routes: [
-      '14:00 - Departure from Marina Gdańsk',
-      '14:30 - Cruise past the Crane (Żuraw) & Old Town',
-      '15:30 - Anchor near Westerplatte with prosecco service',
-      '17:00 - Return upriver to Długie Pobrzeże'
+      'Departure from Marina Gdańsk or Marina Gdynia',
+      'Cruise past the Crane (Żuraw) & Długie Pobrzeże',
+      'Anchor near Westerplatte with prosecco service',
+      'Optional · private guided Old Town walk (+3 h, from €2,400)',
+      'Return upriver under the lights of the Tri-City'
     ],
     itinerary: [
       {
@@ -118,7 +119,7 @@ export const EXPERIENCES: Experience[] = [
         highlight: 'Welcome aboard at the foot of the Old Town.',
         tags: ['Old Town', 'Welcome'],
         image: 'https://images.unsplash.com/photo-1565018900183-9e45f5164d7d?auto=format&fit=crop&q=80&w=1920',
-        extendedDescription: 'Board Sea Seven directly in the heart of Gdańsk, with the spires of St. Mary\'s rising above the medieval skyline. Our crew greets you with chilled prosecco and Pomeranian canapés.'
+        extendedDescription: 'Board Sea Seven directly in the heart of Gdańsk, with the spires of St. Mary\'s rising above the medieval skyline. Our crew greets you with chilled prosecco and Pomeranian canapés. (Pick-up from Marina Gdynia also available for the longer six-hour option.)'
       },
       {
         location: 'The Crane (Żuraw) & Długie Pobrzeże',
@@ -128,29 +129,19 @@ export const EXPERIENCES: Experience[] = [
         extendedDescription: 'Glide slowly beneath the iconic wooden Crane, once the largest port crane in medieval Europe, and along the painted gables of Długie Pobrzeże — a view of Gdańsk only seen from the water.'
       },
       {
+        location: 'Old Town Walk · optional',
+        highlight: 'A private guided hour ashore.',
+        tags: ['Old Town', 'Optional'],
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
+        extendedDescription: 'On the six-hour itinerary, we tie up at Długie Pobrzeże and a private guide leads you through St. Mary\'s Church, the Royal Way, and the amber workshops before returning to the yacht for the afternoon cruise.'
+      },
+      {
         location: 'Westerplatte',
         highlight: 'Anchor at the site where WWII began.',
         tags: ['Memorial', 'Anchorage'],
         image: 'https://images.unsplash.com/photo-1549413203-04987f62fac6?auto=format&fit=crop&q=80&w=1920',
         extendedDescription: 'We drop anchor near the Westerplatte peninsula — a place of profound historical weight — to enjoy a long pause with sparkling wine, light bites, and uninterrupted views of the harbour entrance.'
       }
-    ]
-  },
-  {
-    id: 'gdansk-river',
-    title: 'Gdańsk Old Town River Cruise',
-    description: 'Navigate the historic Motława river into the heart of medieval Gdańsk. Pass the iconic Crane, amber workshops, and Gothic facades before anchoring for a private guided tour of the Old Town.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/2012-08-30_pano_gdansk_sm2.jpg/1280px-2012-08-30_pano_gdansk_sm2.jpg',
-    type: 'day',
-    priceFrom: '€2,400',
-    duration: '6 Hours',
-    routes: [
-      '10:00 - Departure from Marina Gdynia',
-      '11:30 - Enter Motława river approach',
-      '12:00 - Anchor near Żuraw Crane / Old Town',
-      '13:00 - Private guided Old Town walk (optional)',
-      '15:30 - Return cruise via open bay',
-      '17:00 - Return to marina'
     ]
   },
   {

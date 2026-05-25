@@ -79,16 +79,16 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <a 
-            href="#inquiry"
+          <a
+            href="/inquiry.html"
             className={cn(
               "px-8 py-3 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 font-display flex items-center justify-center",
-              isScrolled 
-                ? "btn-gradient-animate text-linen" 
+              isScrolled
+                ? "btn-gradient-animate text-linen"
                 : "bg-linen/10 backdrop-blur-md text-linen border border-linen/30 btn-gradient-animate hover:border-transparent"
             )}
           >
-            {t('nav.inquire')}
+            {t('nav.bookNow')}
           </a>
         </div>
 
@@ -142,12 +142,12 @@ export const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="#inquiry"
+            <a
+              href="/inquiry.html"
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-gradient-animate text-linen py-4 rounded-full text-sm uppercase tracking-widest font-semibold text-center"
             >
-              {t('nav.inquireNow')}
+              {t('nav.bookNow')}
             </a>
           </motion.div>
         )}
