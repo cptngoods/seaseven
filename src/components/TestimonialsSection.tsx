@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { Quote } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -26,13 +26,15 @@ const TESTIMONIALS = [
 
 export const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reduceMotion) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
     }, 8000);
     return () => clearInterval(timer);
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <section className="py-24 px-6 bg-ocean relative overflow-hidden grain-overlay">
@@ -114,7 +116,7 @@ export const TestimonialsSection = () => {
           ))}
         </div>
         {/* Platform Ratings */}
-        <div className="mt-20 pt-12 border-t border-linen/10 flex flex-wrap justify-center items-center gap-12 md:gap-24">
+        <div className="mt-14 pt-10 border-t border-linen/10 flex flex-wrap justify-center items-center gap-10 md:gap-20">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

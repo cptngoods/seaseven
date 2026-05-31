@@ -109,16 +109,37 @@ export const YachtSection = () => {
     }
   ];
 
-  const TECHNICAL_SPEC_LIST = [
-    { label: 'LOA', value: VESSEL.loa, icon: Ruler },
-    { label: 'Beam', value: VESSEL.beam, icon: MoveHorizontal },
-    { label: 'Draft', value: VESSEL.draft, icon: ArrowDownToLine },
-    { label: 'Engines', value: TECHNICAL_SPECS.engines, icon: Zap },
-    { label: 'Fuel', value: TECHNICAL_SPECS.fuelCapacity, icon: Fuel },
-    { label: 'Water', value: TECHNICAL_SPECS.waterCapacity, icon: Droplets },
-    { label: 'Built', value: TECHNICAL_SPECS.built, icon: Wind },
-    { label: 'Displacement', value: TECHNICAL_SPECS.displacement || '75 t', icon: Anchor },
-    { label: 'Guests', value: `Up to ${VESSEL.guests}`, icon: ShieldCheck }
+  const FEATURED_SPECS = [
+    { label: 'Length Overall', value: VESSEL.loa },
+    { label: 'Guests', value: `Up to ${VESSEL.guests}` },
+    { label: 'Cruising Speed', value: TECHNICAL_SPECS.cruiseSpeed },
+  ];
+
+  const TECHNICAL_SPEC_GROUPS = [
+    {
+      title: 'Dimensions',
+      items: [
+        { label: 'LOA', value: VESSEL.loa, icon: Ruler },
+        { label: 'Beam', value: VESSEL.beam, icon: MoveHorizontal },
+        { label: 'Draft', value: VESSEL.draft, icon: ArrowDownToLine },
+      ],
+    },
+    {
+      title: 'Engineering',
+      items: [
+        { label: 'Engines', value: TECHNICAL_SPECS.engines, icon: Zap },
+        { label: 'Max Speed', value: TECHNICAL_SPECS.maxSpeed, icon: Wind },
+        { label: 'Cruise Speed', value: TECHNICAL_SPECS.cruiseSpeed, icon: Anchor },
+      ],
+    },
+    {
+      title: 'Capacity',
+      items: [
+        { label: 'Fuel / Range', value: TECHNICAL_SPECS.fuelCapacity, icon: Fuel },
+        { label: 'Water', value: TECHNICAL_SPECS.waterCapacity, icon: Droplets },
+        { label: 'Displacement', value: TECHNICAL_SPECS.displacement || '75 t', icon: ShieldCheck },
+      ],
+    },
   ];
 
   const containerVariants = {
@@ -141,25 +162,25 @@ export const YachtSection = () => {
   };
 
   return (
-    <section id="yacht" className="py-32 px-6 bg-linen grain-overlay overflow-hidden">
+    <section id="yacht" className="py-24 md:py-28 px-6 bg-ocean text-linen grain-overlay overflow-hidden border-t border-linen/10">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16 items-stretch mb-32">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch mb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="lg:col-span-5 space-y-12"
+            className="lg:col-span-5 space-y-8"
           >
             <div className="space-y-6">
-              <span className="text-sage uppercase tracking-[0.6em] text-[10px] font-bold block font-display">The Vessel</span>
-              <h2 className="text-6xl md:text-8xl font-display font-bold text-ocean leading-[0.85] uppercase tracking-tighter">
+              <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display seafarer-line">The Vessel</span>
+              <h2 className="text-6xl md:text-8xl font-serif font-semibold text-linen leading-[0.9]">
                 Life on <br />
                 <span className="text-rose font-serif italic lowercase tracking-normal">The Water.</span>
               </h2>
             </div>
             
-            <p className="text-xl text-charcoal/70 leading-relaxed font-serif italic">
+            <p className="text-xl text-linen/68 leading-relaxed font-serif italic">
               A masterpiece of Italian naval architecture, SEA SEVEN is an Admiral 27m motor yacht 
               that seamlessly blends late-70s character with the uncompromising luxury of her 
               2021 refit. Her classic lines and powerful presence make her the most distinguished 
@@ -169,8 +190,8 @@ export const YachtSection = () => {
             {/* Dynamic Feature List - Redesigned for Compactness */}
             <div className="space-y-5 pt-4 max-w-sm">
               <div className="flex items-center justify-between border-b border-ocean/10 pb-3">
-                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-sage">Experience Highlights</span>
-                <span className="text-[10px] font-mono text-ocean/40 uppercase tracking-widest">Admiral 27m</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-rose">Experience Highlights</span>
+                <span className="text-[10px] font-mono text-linen/40 uppercase tracking-widest">Admiral 27m</span>
               </div>
               
               <div className="grid grid-cols-1 gap-0.5">
@@ -180,13 +201,13 @@ export const YachtSection = () => {
                     onMouseEnter={() => setActiveFeatureIndex(i)}
                     className={cn(
                       "group cursor-pointer relative py-2.5 px-4 rounded-lg transition-all duration-500 flex items-center justify-between overflow-hidden",
-                      activeFeatureIndex === i ? "bg-ocean text-linen shadow-lg shadow-ocean/10" : "hover:bg-ocean/5 text-ocean/60"
+                      activeFeatureIndex === i ? "bg-rose text-ocean shadow-lg shadow-black/20" : "hover:bg-linen/5 text-linen/60"
                     )}
                   >
                     <div className="flex items-center gap-5 relative z-10">
                       <span className={cn(
                         "text-[9px] font-mono font-bold transition-colors duration-500",
-                        activeFeatureIndex === i ? "text-rose" : "text-ocean/30"
+                        activeFeatureIndex === i ? "text-ocean" : "text-linen/30"
                       )}>
                         0{i + 1}
                       </span>
@@ -200,17 +221,17 @@ export const YachtSection = () => {
                         <motion.div 
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
-                          className="w-1.5 h-1.5 rounded-full bg-rose shadow-[0_0_12px_rgba(0,91,150,0.8)]"
+                          className="w-1.5 h-1.5 rounded-full bg-ocean shadow-[0_0_12px_rgba(185,150,99,0.8)]"
                         />
                       ) : (
-                        <div className="w-1 h-1 rounded-full bg-ocean/10 group-hover:bg-ocean/30" />
+                        <div className="w-1 h-1 rounded-full bg-linen/10 group-hover:bg-linen/30" />
                       )}
                     </div>
 
                     {activeFeatureIndex === i && (
                       <motion.div 
                         layoutId="active-highlight-vessel"
-                        className="absolute inset-0 bg-ocean z-0"
+                        className="absolute inset-0 bg-rose z-0"
                         transition={{ type: "spring", bounce: 0.15, duration: 0.6 }}
                       />
                     )}
@@ -227,8 +248,7 @@ export const YachtSection = () => {
             transition={{ duration: 1.5 }}
             className="lg:col-span-7 relative"
           >
-            <div className="absolute -inset-20 bg-sage/5 rounded-full blur-[120px] -z-10" />
-            <div className="relative h-full min-h-[500px] rounded-[4rem] overflow-hidden soft-shadow bg-ocean/5">
+            <div className="relative h-full min-h-[420px] overflow-hidden soft-shadow bg-linen/5 border border-linen/10">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeFeatureIndex}
@@ -281,38 +301,70 @@ export const YachtSection = () => {
           </motion.div>
         </div>
 
-        {/* Technical Specs - Editorial Grid */}
+        {/* Technical Specs */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-40"
+          className="mb-24"
         >
-          <motion.div variants={itemVariants} className="flex items-center gap-8 mb-20">
-            <div className="h-[1px] flex-1 bg-ocean/10" />
-            <h3 className="text-xs uppercase tracking-[0.5em] font-bold text-ocean/40 font-display">Technical Specifications</h3>
-            <div className="h-[1px] flex-1 bg-ocean/10" />
-          </motion.div>
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] border border-linen/10 bg-charcoal/40 soft-shadow">
+            <motion.div variants={itemVariants} className="p-7 md:p-10 border-b lg:border-b-0 lg:border-r border-linen/10">
+              <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display mb-7 seafarer-line">
+                Technical Specifications
+              </span>
+              <h3 className="text-5xl md:text-6xl font-serif font-semibold leading-[0.9] text-linen">
+                Built for <span className="text-rose font-serif italic lowercase tracking-normal">the Baltic.</span>
+              </h3>
+              <p className="mt-6 max-w-md text-linen/58 font-serif italic text-lg leading-relaxed">
+                A classic mahogany Admiral 27m with modern systems, generous guest capacity, and the shallow draft needed for coastal cruising.
+              </p>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-12 gap-y-8 p-10 rounded-[3rem] bg-white/40 backdrop-blur-sm border border-ocean/5 overflow-hidden">
-            {TECHNICAL_SPEC_LIST.map((spec, i) => (
-              <motion.div 
-                key={i}
-                variants={itemVariants}
-                className="flex flex-col gap-2 min-w-fit"
-              >
-                <div className="flex items-center gap-2 opacity-40">
-                   <spec.icon className="w-3.5 h-3.5 text-ocean" />
-                   <span className="text-[8px] uppercase tracking-[0.4em] font-bold font-display text-ocean whitespace-nowrap">
-                     {spec.label}
-                   </span>
-                </div>
-                <h4 className="text-base md:text-lg font-serif italic text-ocean whitespace-nowrap">
-                  {spec.value}
-                </h4>
-              </motion.div>
-            ))}
+              <div className="mt-8 grid sm:grid-cols-3 lg:grid-cols-1 gap-3">
+                {FEATURED_SPECS.map((spec) => (
+                  <div key={spec.label} className="border border-linen/10 bg-ocean/55 p-4">
+                    <div className="text-[8px] uppercase tracking-[0.34em] text-rose font-display font-bold mb-2">
+                      {spec.label}
+                    </div>
+                    <div className="text-2xl font-serif italic text-linen leading-none">
+                      {spec.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3">
+              {TECHNICAL_SPEC_GROUPS.map((group) => (
+                <motion.div
+                  key={group.title}
+                  variants={itemVariants}
+                  className="p-6 md:p-7 border-b md:border-b-0 md:border-r last:border-r-0 border-linen/10"
+                >
+                  <h4 className="text-[10px] uppercase tracking-[0.42em] font-display font-bold text-linen/45 mb-6">
+                    {group.title}
+                  </h4>
+                  <div className="space-y-5">
+                    {group.items.map((spec) => (
+                      <div key={spec.label} className="grid grid-cols-[28px_minmax(0,1fr)] gap-4 items-start">
+                        <div className="w-7 h-7 border border-rose/25 bg-rose/10 flex items-center justify-center text-rose">
+                          <spec.icon className="w-3.5 h-3.5" />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-[8px] uppercase tracking-[0.32em] text-linen/38 font-display font-bold mb-1">
+                            {spec.label}
+                          </div>
+                          <div className="text-base md:text-lg font-serif italic text-linen leading-tight">
+                            {spec.value}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -321,10 +373,10 @@ export const YachtSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-12"
         >
-          <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display mb-8">Playtime</span>
-          <h3 className="text-6xl md:text-8xl font-display font-bold text-ocean leading-[0.85] uppercase tracking-tighter">
+          <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display mb-8 seafarer-line">Playtime</span>
+          <h3 className="text-6xl md:text-8xl font-serif font-semibold text-linen leading-[0.9]">
             Water Toys <br />
             <span className="text-rose font-serif italic lowercase tracking-normal">& Soul.</span>
           </h3>
@@ -334,9 +386,9 @@ export const YachtSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative py-24 px-8 md:px-20 bg-ocean rounded-[4rem] text-linen"
+          className="relative py-16 px-6 md:px-14 bg-charcoal text-linen border border-linen/10"
         >
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10 rounded-[4rem] pointer-events-none overflow-hidden" />
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10 rounded-sm pointer-events-none overflow-hidden" />
           
           <div className="relative z-10 grid lg:grid-cols-12 gap-16 items-center">
             {/* Compact Menu Section */}
@@ -378,7 +430,7 @@ export const YachtSection = () => {
 
             {/* Wide Horizontal Media Section */}
             <div className="lg:col-span-8 relative z-20">
-              <div className="relative w-full aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl bg-linen/5 group">
+              <div className="relative w-full aspect-video rounded-sm overflow-hidden shadow-2xl bg-linen/5 group">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeToyIndex}

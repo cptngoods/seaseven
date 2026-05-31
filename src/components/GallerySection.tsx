@@ -58,21 +58,21 @@ export const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-40 px-6 bg-linen grain-overlay overflow-hidden">
+    <section id="gallery" className="py-24 md:py-28 px-6 bg-linen grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-10">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-sage uppercase tracking-[0.6em] text-[10px] font-bold mb-8 block font-display"
+              className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold mb-8 block font-display seafarer-line"
             >
               The Gallery
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-8xl font-display font-bold text-ocean leading-[0.85] uppercase tracking-tighter"
+              className="text-6xl md:text-8xl font-serif font-semibold text-ocean leading-[0.9]"
             >
               Captured <br />
               <span className="text-rose font-serif italic lowercase tracking-normal">Moments.</span>
@@ -84,7 +84,7 @@ export const GallerySection = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`relative px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-500 font-display flex items-center gap-2 group ${
+                  className={`relative px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-all duration-500 font-display flex items-center gap-2 group ${
                   filter === cat 
                     ? 'text-linen' 
                     : 'text-ocean/40 hover:text-ocean'
@@ -106,7 +106,7 @@ export const GallerySection = () => {
                 {filter === cat && (
                   <motion.div
                     layoutId="active-filter"
-                    className="absolute inset-0 bg-ocean rounded-full shadow-xl shadow-ocean/20"
+                    className="absolute inset-0 bg-ocean shadow-xl shadow-ocean/20"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -117,7 +117,7 @@ export const GallerySection = () => {
 
         <motion.div 
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-[300px]"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 auto-rows-[240px]"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             {displayedImages.map((img, i) => {
@@ -140,7 +140,7 @@ export const GallerySection = () => {
                     layout: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }
                   }}
                   className={cn(
-                    "relative group cursor-pointer overflow-hidden rounded-[2.5rem] soft-shadow transition-all duration-700",
+                    "relative group cursor-pointer overflow-hidden soft-shadow transition-all duration-700 border border-ocean/10",
                     isLarge ? "sm:col-span-2 sm:row-span-2" : 
                     isWide ? "sm:col-span-2 sm:row-span-1" :
                     isTall ? "sm:col-span-1 sm:row-span-2" : "col-span-1 row-span-1"
@@ -194,7 +194,7 @@ export const GallerySection = () => {
           >
             <button 
               onClick={() => setVisibleCount(prev => prev + 8)}
-              className="group relative px-12 py-4 overflow-hidden rounded-full border border-ocean/10 transition-all duration-500 hover:border-ocean"
+              className="group relative px-12 py-4 overflow-hidden border border-ocean/10 transition-all duration-500 hover:border-ocean"
             >
               <div className="absolute inset-0 bg-ocean translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <span className="relative z-10 text-ocean uppercase tracking-[0.3em] text-[10px] font-bold group-hover:text-linen transition-colors duration-500">
@@ -267,7 +267,7 @@ export const GallerySection = () => {
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               src={selectedImage.url}
               alt={`Lagoon 620 ${selectedImage.category}`}
-              className="max-w-full max-h-full rounded-[3rem] shadow-2xl object-contain border border-linen/10 pointer-events-none"
+              className="max-w-full max-h-full shadow-2xl object-contain border border-linen/10 pointer-events-none"
 
             />
           </motion.div>

@@ -29,9 +29,9 @@ export const FAQSection = () => {
   const categories = Object.keys(FAQ_DATA) as Category[];
 
   return (
-    <section className="py-24 px-6 bg-linen grain-overlay overflow-hidden">
+    <section className="py-20 md:py-24 px-6 bg-linen grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-14">
           <div className="space-y-6">
             <motion.span
               initial={{ opacity: 0 }}
@@ -85,7 +85,7 @@ export const FAQSection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-20 items-stretch min-h-[400px]">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-stretch min-h-[360px]">
           {/* Left Column: Questions */}
           <div className="space-y-2">
             <AnimatePresence mode="wait">
@@ -102,7 +102,7 @@ export const FAQSection = () => {
                     key={i}
                     onClick={() => setOpenIndex(i)}
                     className={cn(
-                      "w-full p-6 text-left transition-all duration-500 rounded-2xl flex items-center justify-between group",
+                      "w-full p-5 text-left transition-all duration-300 rounded-sm flex items-center justify-between group",
                       openIndex === i ? "bg-ocean text-linen shadow-xl" : "hover:bg-ocean/5 text-ocean/60"
                     )}
                   >
@@ -130,7 +130,7 @@ export const FAQSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as any }}
-                className="bg-white/60 backdrop-blur-2xl p-12 rounded-[3.5rem] border border-ocean/5 shadow-2xl relative overflow-hidden flex flex-col justify-center min-h-[450px]"
+                className="bg-white/70 backdrop-blur-2xl p-8 md:p-10 rounded-sm border border-ocean/10 shadow-2xl relative overflow-hidden flex flex-col justify-center min-h-[360px]"
               >
                 <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
                   <Plus className="w-32 h-32 text-ocean" />

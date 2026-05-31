@@ -99,19 +99,19 @@ export const BookingSection = () => {
   };
 
   return (
-    <section id="inquiry" className="py-40 px-6 bg-gradient-to-tr from-sky/10 via-linen to-sky/5 grain-overlay overflow-hidden">
+    <section id="inquiry" className="py-24 md:py-28 px-6 bg-linen grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:col-span-5 space-y-16"
+            className="lg:col-span-5 space-y-10"
           >
             <div className="space-y-8">
-              <motion.span variants={itemVariants} className="text-sage uppercase tracking-[0.6em] text-[10px] font-bold block font-display">Inquiry</motion.span>
-              <motion.h2 variants={itemVariants} className="text-6xl md:text-8xl font-display font-bold text-ocean leading-[0.85] uppercase tracking-tighter">
+              <motion.span variants={itemVariants} className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display seafarer-line">Inquiry</motion.span>
+              <motion.h2 variants={itemVariants} className="text-6xl md:text-8xl font-serif font-semibold text-ocean leading-[0.9]">
                 Start Your <br />
                 <span className="text-rose font-serif italic lowercase tracking-normal">Journey.</span>
               </motion.h2>
@@ -142,7 +142,7 @@ export const BookingSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="lg:col-span-7 bg-white/60 backdrop-blur-xl p-8 md:p-12 rounded-[3rem] shadow-2xl border border-ocean/5 soft-shadow min-h-[600px] flex flex-col"
+            className="lg:col-span-7 bg-ocean p-7 md:p-10 shadow-2xl border border-ocean/10 soft-shadow min-h-[560px] flex flex-col"
           >
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
@@ -157,7 +157,7 @@ export const BookingSection = () => {
                   <div className="grid sm:grid-cols-2 gap-8">
                     <div className="space-y-3">
                       <div className="flex justify-between items-center px-2">
-                        <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 font-display">Full Name</label>
+                        <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 font-display">Full Name</label>
                         <AnimatePresence>
                           {touched.name && errors.name && (
                             <motion.span 
@@ -179,9 +179,9 @@ export const BookingSection = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           className={cn(
-                            "w-full bg-linen/20 border rounded-2xl p-4 focus:ring-1 outline-none font-serif italic text-lg text-ocean placeholder:text-ocean/20 transition-all duration-300",
-                            touched.name && errors.name ? "border-rose/40 focus:ring-rose/30 bg-rose/[0.02]" : 
-                            touched.name && !errors.name ? "border-sage/40 focus:ring-sage/30 bg-sage/[0.02]" : "border-ocean/5 focus:ring-sage/20"
+                            "w-full bg-linen/5 border p-4 focus:ring-1 outline-none font-serif italic text-lg text-linen placeholder:text-linen/20 transition-all duration-300",
+                            touched.name && errors.name ? "border-rose/60 focus:ring-rose/30 bg-rose/[0.02]" : 
+                            touched.name && !errors.name ? "border-sage/50 focus:ring-sage/30 bg-sage/[0.02]" : "border-linen/12 focus:ring-rose/20"
                           )} 
                           placeholder="e.g. Julian Alexander" 
                         />
@@ -193,7 +193,7 @@ export const BookingSection = () => {
 
                     <div className="space-y-3">
                       <div className="flex justify-between items-center px-2">
-                        <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 font-display">Email Address</label>
+                        <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 font-display">Email Address</label>
                         <AnimatePresence>
                           {touched.email && errors.email && (
                             <motion.span 
@@ -215,9 +215,9 @@ export const BookingSection = () => {
                           onChange={handleChange}
                           onBlur={handleBlur}
                           className={cn(
-                            "w-full bg-linen/20 border rounded-2xl p-4 focus:ring-1 outline-none font-serif italic text-lg text-ocean placeholder:text-ocean/20 transition-all duration-300",
-                            touched.email && errors.email ? "border-rose/40 focus:ring-rose/30 bg-rose/[0.02]" : 
-                            touched.email && !errors.email ? "border-sage/40 focus:ring-sage/30 bg-sage/[0.02]" : "border-ocean/5 focus:ring-sage/20"
+                            "w-full bg-linen/5 border p-4 focus:ring-1 outline-none font-serif italic text-lg text-linen placeholder:text-linen/20 transition-all duration-300",
+                            touched.email && errors.email ? "border-rose/60 focus:ring-rose/30 bg-rose/[0.02]" : 
+                            touched.email && !errors.email ? "border-sage/50 focus:ring-sage/30 bg-sage/[0.02]" : "border-linen/12 focus:ring-rose/20"
                           )} 
                           placeholder="e.g. julian@sea-seven.pl" 
                         />
@@ -230,13 +230,13 @@ export const BookingSection = () => {
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-4">
-                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 ml-2 font-display block">Special Occasion</label>
+                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 ml-2 font-display block">Special Occasion</label>
                       <div className="relative">
                         <select 
                           name="specialOccasion"
                           value={formData.specialOccasion}
                           onChange={handleChange}
-                          className="w-full bg-linen/20 border border-ocean/5 rounded-2xl p-4 focus:ring-1 focus:ring-sage/20 outline-none appearance-none font-serif italic text-lg text-ocean cursor-pointer transition-all h-[52px]"
+                          className="w-full bg-linen/5 border border-linen/12 p-4 focus:ring-1 focus:ring-rose/20 outline-none appearance-none font-serif italic text-lg text-linen cursor-pointer transition-all h-[52px]"
                         >
                           <option>None</option>
                           <option>Birthday / Celebration</option>
@@ -254,13 +254,13 @@ export const BookingSection = () => {
 
                   <motion.div layout className="grid sm:grid-cols-2 gap-8 relative">
                     <div className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 ml-2 font-display">Destination</label>
+                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 ml-2 font-display">Destination</label>
                       <div className="relative">
                         <select 
                           name="destination"
                           value={formData.destination}
                           onChange={handleChange}
-                          className="w-full bg-linen/20 border border-ocean/5 rounded-2xl p-4 focus:ring-1 focus:ring-sage/20 outline-none appearance-none font-serif italic text-lg text-ocean cursor-pointer transition-all h-[52px]"
+                          className="w-full bg-linen/5 border border-linen/12 p-4 focus:ring-1 focus:ring-rose/20 outline-none appearance-none font-serif italic text-lg text-linen cursor-pointer transition-all h-[52px]"
                         >
                           <option>Sopot Anchorage</option>
                           <option>Gdańsk Old Town</option>
@@ -275,13 +275,13 @@ export const BookingSection = () => {
                     </div>
 
                     <motion.div layout className="space-y-3">
-                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 ml-2 font-display">Number of Guests</label>
+                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 ml-2 font-display">Number of Guests</label>
                       <div className="relative">
                         <select 
                           name="guests"
                           value={formData.guests}
                           onChange={handleChange}
-                          className="w-full bg-linen/20 border border-ocean/5 rounded-2xl p-4 focus:ring-1 focus:ring-sage/20 outline-none appearance-none font-serif italic text-lg text-ocean cursor-pointer transition-all h-[52px]"
+                          className="w-full bg-linen/5 border border-linen/12 p-4 focus:ring-1 focus:ring-rose/20 outline-none appearance-none font-serif italic text-lg text-linen cursor-pointer transition-all h-[52px]"
                         >
                           {[...Array(16)].map((_, i) => (
                             <option key={i + 1} value={i + 1}>{i + 1} {i === 0 ? 'Guest' : 'Guests'}</option>
@@ -296,7 +296,7 @@ export const BookingSection = () => {
 
                   <div className="space-y-3">
                     <div className="flex justify-between items-center px-2">
-                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-ocean/50 font-display">Message & Requests</label>
+                      <label className="text-[9px] uppercase tracking-[0.4em] font-bold text-linen/50 font-display">Message & Requests</label>
                       <AnimatePresence>
                         {touched.message && errors.message && (
                           <motion.span 
@@ -317,9 +317,9 @@ export const BookingSection = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         className={cn(
-                          "w-full bg-linen/20 border rounded-2xl p-4 focus:ring-1 outline-none h-32 font-serif italic text-lg text-ocean placeholder:text-ocean/20 transition-all duration-300 resize-none",
-                          touched.message && errors.message ? "border-rose/40 focus:ring-rose/30 bg-rose/[0.02]" : 
-                          touched.message && !errors.message ? "border-sage/40 focus:ring-sage/30 bg-sage/[0.02]" : "border-ocean/5 focus:ring-sage/20"
+                          "w-full bg-linen/5 border p-4 focus:ring-1 outline-none h-32 font-serif italic text-lg text-linen placeholder:text-linen/20 transition-all duration-300 resize-none",
+                          touched.message && errors.message ? "border-rose/60 focus:ring-rose/30 bg-rose/[0.02]" : 
+                          touched.message && !errors.message ? "border-sage/50 focus:ring-sage/30 bg-sage/[0.02]" : "border-linen/12 focus:ring-rose/20"
                         )} 
                         placeholder="Share your vision for the journey..."
                       ></textarea>
@@ -333,8 +333,8 @@ export const BookingSection = () => {
                     type="submit"
                     disabled={!isFormValid}
                     className={cn(
-                      "group relative w-full overflow-hidden py-6 rounded-2xl text-[9px] uppercase tracking-[0.5em] font-bold font-display transition-all duration-700",
-                      isFormValid ? "btn-gradient-animate text-linen shadow-xl shadow-ocean/10" : "bg-ocean/10 text-ocean/30 cursor-not-allowed"
+                      "group relative w-full overflow-hidden py-6 rounded-sm text-[9px] uppercase tracking-[0.5em] font-bold font-display transition-all duration-700",
+                      isFormValid ? "btn-gradient-animate text-ocean shadow-xl shadow-ocean/10" : "bg-linen/10 text-linen/30 cursor-not-allowed"
                     )}
                   >
                     <span className="relative z-10">Submit Inquiry</span>
@@ -371,7 +371,7 @@ export const BookingSection = () => {
                     </p>
                   </div>
 
-                  <div className="w-full max-w-sm bg-linen/30 border border-ocean/5 rounded-[2rem] p-8 text-left space-y-6">
+                  <div className="w-full max-w-sm bg-linen/30 border border-ocean/5 rounded-sm p-8 text-left space-y-6">
                     <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-sage block border-b border-ocean/5 pb-4">Request Summary</span>
                     
                     <div className="grid grid-cols-2 gap-y-4">

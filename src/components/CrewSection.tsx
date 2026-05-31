@@ -34,7 +34,7 @@ export const CrewSection = () => {
             transition={{ duration: 1.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden soft-shadow">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden soft-shadow">
               <img
                 src="https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-1.jpg"
                 alt="Sea Seven Crew"

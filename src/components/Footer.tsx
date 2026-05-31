@@ -3,12 +3,12 @@ import { Anchor, Instagram, Facebook, Twitter } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-ocean via-charcoal to-ocean text-linen py-24 px-6 relative overflow-hidden">
+    <footer className="bg-ocean text-linen py-24 px-6 relative overflow-hidden border-t border-linen/10">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 mb-20">
           <div className="lg:col-span-5 space-y-8">
             <div className="flex items-center gap-4">
-              <span className="text-4xl md:text-5xl font-display font-bold tracking-[0.2em] uppercase">SEA SEVEN</span>
+              <span className="text-5xl md:text-6xl font-serif font-semibold">SEA SEVEN</span>
             </div>
             <p className="text-linen/60 max-w-sm leading-relaxed font-serif text-xl italic">
               Luxury Admiral 27m motor yacht charters operating from Gdynia, Poland. 

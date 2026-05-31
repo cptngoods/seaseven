@@ -192,7 +192,7 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
 
                   {/* Right Column: Details & Inclusions */}
                   <div className="lg:col-span-5 space-y-12">
-                    <div className="bg-white/50 backdrop-blur-md p-12 rounded-[3rem] border border-ocean/5 soft-shadow space-y-12 sticky top-10">
+                    <div className="bg-white/50 backdrop-blur-md p-12 rounded-sm border border-ocean/5 soft-shadow space-y-12 sticky top-10">
                       <div className="grid grid-cols-2 gap-10">
                         <div className="space-y-2">
                           <p className="text-[10px] uppercase tracking-widest text-ocean/40 font-bold font-display">Duration</p>
@@ -247,7 +247,7 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
                               element.scrollIntoView({ behavior: 'smooth' });
                             }
                           }}
-                          className="w-full py-6 bg-ocean text-linen rounded-2xl font-display font-bold uppercase tracking-[0.2em] text-xs hover:bg-rose transition-all duration-700 shadow-2xl hover:shadow-rose/20"
+                          className="w-full py-6 bg-ocean text-linen rounded-sm font-display font-bold uppercase tracking-[0.2em] text-xs hover:bg-rose transition-all duration-700 shadow-2xl hover:shadow-rose/20"
                         >
                           Inquire Now
                         </button>
@@ -257,7 +257,7 @@ export const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) =
                             href={experience.tripAdvisorUrl || "https://www.tripadvisor.com"} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="w-full py-4 border border-[#00af87]/30 text-[#00af87] rounded-2xl font-display font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center gap-3 hover:bg-[#00af87] hover:text-white transition-all duration-500 group"
+                            className="w-full py-4 border border-[#00af87]/30 text-[#00af87] rounded-sm font-display font-bold uppercase tracking-[0.2em] text-[10px] flex items-center justify-center gap-3 hover:bg-[#00af87] hover:text-white transition-all duration-500 group"
                           >
                             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
                               <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm-3.5 5c-1.379 0-2.5 1.121-2.5 2.5S7.121 12 8.5 12s2.5-1.121 2.5-2.5S9.879 7 8.5 7zm7 0c-1.379 0-2.5 1.121-2.5 2.5s1.121 2.5 2.5 2.5 2.5-1.121 2.5-2.5S16.879 7 15.5 7zM8.5 9c.276 0 .5.224.5.5S8.776 10 8.5 10s-.5-.224-.5-.5.224-.5.5-.5zm7 0c.276 0 .5.224.5.5s-.224.5-.5.5-.5-.224-.5-.5.224-.5.5-.5zM12 14c-2.671 0-4.84 1.709-5.42 4h10.84c-.58-2.291-2.749-4-5.42-4z"/>

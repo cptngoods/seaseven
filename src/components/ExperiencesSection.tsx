@@ -28,9 +28,9 @@ export const ExperiencesSection = () => {
   };
 
   return (
-    <section id="experiences" className="py-40 px-6 bg-ocean text-linen grain-overlay overflow-hidden">
+    <section id="experiences" className="py-24 md:py-28 px-6 bg-ocean text-linen grain-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-10">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ export const ExperiencesSection = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-8xl font-display font-bold uppercase tracking-tighter leading-[0.85]"
+            className="text-6xl md:text-8xl font-serif font-semibold leading-[0.9]"
             >
               Baltic <br />
               <span className="text-rose font-serif italic lowercase tracking-normal">Dreams.</span>
@@ -54,7 +54,7 @@ export const ExperiencesSection = () => {
           </p>
         </div>
 
-        <div className="space-y-40">
+        <div className="space-y-24">
           {/* Day Charters */}
           <motion.div
             variants={containerVariants}
@@ -62,19 +62,19 @@ export const ExperiencesSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div variants={itemVariants} className="flex items-center gap-8 mb-16">
+            <motion.div variants={itemVariants} className="flex items-center gap-8 mb-10">
               <h3 className="text-xs uppercase tracking-[0.5em] font-bold text-rose font-display whitespace-nowrap">Day Events</h3>
               <div className="h-[1px] flex-1 bg-linen/10" />
             </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-3 gap-8">
               {EXPERIENCES.filter(exp => exp.type === 'day').map((exp) => (
                 <motion.div
                   key={exp.id}
                   variants={itemVariants}
                   className="group relative"
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-[3rem] soft-shadow mb-8">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-sm soft-shadow mb-8">
                     <img
                       src={exp.image}
                       alt={exp.title}
@@ -82,12 +82,12 @@ export const ExperiencesSection = () => {
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
 
                     />
-                    <div className="absolute inset-0 bg-ocean/20 group-hover:bg-transparent transition-colors duration-700" />
+                    <div className="absolute inset-0 bg-ocean/28 group-hover:bg-ocean/5 transition-colors duration-700" />
                     
                     <div className="absolute bottom-8 left-8 right-8">
                       <button 
                         onClick={() => setSelectedExp(exp)}
-                        className="w-full py-4 bg-linen/10 backdrop-blur-md text-linen border border-linen/20 rounded-2xl font-display font-bold text-[10px] uppercase tracking-widest hover:bg-rose hover:border-rose transition-all duration-500"
+                        className="w-full py-4 bg-ocean/35 backdrop-blur-md text-linen border border-linen/25 font-display font-bold text-[10px] uppercase tracking-widest hover:bg-rose hover:text-ocean hover:border-rose transition-all duration-500"
                       >
                         Explore Details
                       </button>
@@ -121,7 +121,7 @@ export const ExperiencesSection = () => {
               viewport={{ once: true, amount: 0.05 }}
             >
               {/* Editorial header */}
-              <motion.div variants={itemVariants} className="text-center mb-20 max-w-3xl mx-auto">
+              <motion.div variants={itemVariants} className="text-center mb-12 max-w-3xl mx-auto">
                 <div className="flex items-center justify-center gap-4 mb-6">
                   <div className="h-[1px] w-12 bg-rose/40" />
                   <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold font-display">Private Events</span>
@@ -143,7 +143,7 @@ export const ExperiencesSection = () => {
                     key={exp.id}
                     variants={itemVariants}
                     onClick={() => setSelectedExp(exp)}
-                    className="group relative aspect-[3/4] overflow-hidden rounded-[2rem] cursor-pointer text-left soft-shadow focus:outline-none focus:ring-2 focus:ring-rose/60 focus:ring-offset-4 focus:ring-offset-ocean"
+                    className="group relative aspect-[3/4] overflow-hidden cursor-pointer text-left soft-shadow focus:outline-none focus:ring-2 focus:ring-rose/60 focus:ring-offset-4 focus:ring-offset-ocean border border-linen/10"
                   >
                     <img
                       src={exp.image}
@@ -155,7 +155,7 @@ export const ExperiencesSection = () => {
                     {/* Always-on gradient + price chip */}
                     <div className="absolute inset-0 bg-gradient-to-t from-ocean via-ocean/40 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
                     <div className="absolute top-5 right-5 z-10">
-                      <span className="px-3 py-1.5 bg-linen/10 backdrop-blur-md text-linen text-[9px] uppercase tracking-[0.25em] font-bold rounded-full font-display border border-linen/20">
+                      <span className="px-3 py-1.5 bg-ocean/55 backdrop-blur-md text-linen text-[9px] uppercase tracking-[0.25em] font-bold font-display border border-linen/20">
                         {exp.priceFrom}
                       </span>
                     </div>
@@ -200,10 +200,10 @@ export const ExperiencesSection = () => {
               </div>
 
               {/* Section CTA */}
-              <motion.div variants={itemVariants} className="mt-20 text-center">
+              <motion.div variants={itemVariants} className="mt-12 text-center">
                 <a
                   href="#inquiry"
-                  className="inline-flex items-center gap-3 px-10 py-5 bg-rose hover:bg-linen text-linen hover:text-ocean rounded-full font-display font-bold text-[11px] uppercase tracking-[0.3em] transition-all duration-500"
+                  className="inline-flex items-center gap-3 px-10 py-5 bg-rose hover:bg-linen text-ocean font-display font-bold text-[11px] uppercase tracking-[0.3em] transition-all duration-500"
                 >
                   Plan your private event
                   <ArrowRight className="w-4 h-4" />

@@ -32,14 +32,14 @@ export const ExtrasSection = () => {
   return (
     <section
       id="extras"
-      className="py-24 px-6 bg-ocean text-linen relative overflow-hidden grain-overlay"
+      className="py-18 md:py-20 px-6 bg-ocean text-linen relative overflow-hidden grain-overlay border-t border-linen/10"
     >
-      <div className="absolute top-[-15%] right-[-10%] w-[45%] h-[45%] bg-rose/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-seafoam/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose/40 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(244,239,231,0.035),transparent_34%,rgba(191,168,136,0.035)_68%,transparent)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
         {/* Compact inline header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div>
             <motion.span
               initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ export const ExtrasSection = () => {
         {/* Compact horizontal cards */}
         <div
           onMouseLeave={() => setHoveredId(null)}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4"
         >
           {EXTRAS.map((extra) => {
             const Icon = ICONS[extra.icon] ?? Sparkles;
@@ -80,24 +80,25 @@ export const ExtrasSection = () => {
                 key={extra.id}
                 onMouseEnter={() => setHoveredId(extra.id)}
                 className={cn(
-                  'group relative rounded-2xl bg-linen/[0.04] backdrop-blur-sm border min-h-[112px] will-change-transform transition-all duration-400 ease-out overflow-hidden',
-                  isHovered && 'border-rose/60 bg-linen/10 z-10 scale-[1.03] -translate-y-1 opacity-100',
-                  isDimmed && 'border-linen/[0.04] opacity-30 blur-[1.5px] scale-[0.98]',
+                  'group relative rounded-sm bg-linen/[0.04] backdrop-blur-sm border min-h-[112px] will-change-transform transition-all duration-[400ms] ease-out overflow-hidden',
+                  'h-[132px] sm:h-[142px] lg:h-[150px]',
+                  isHovered && 'border-rose/60 bg-linen/10 z-10 -translate-y-1 opacity-100',
+                  isDimmed && 'border-linen/[0.04] opacity-45 scale-[0.99]',
                   !isHovered && !isDimmed && 'border-linen/10 opacity-100'
                 )}
               >
                 {/* Default — icon + name + price */}
                 <div
                   className={cn(
-                    'absolute inset-0 p-5 flex gap-4 items-center transition-opacity duration-400',
+                    'absolute inset-0 p-4 xl:p-5 flex gap-4 items-center transition-opacity duration-[400ms]',
                     isHovered ? 'opacity-0' : 'opacity-100'
                   )}
                 >
-                  <div className="shrink-0 w-10 h-10 rounded-xl bg-rose/10 border border-rose/20 flex items-center justify-center">
+                  <div className="shrink-0 w-10 h-10 rounded-sm bg-rose/10 border border-rose/20 flex items-center justify-center">
                     <Icon className="w-4 h-4 text-rose" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-serif italic text-linen leading-tight truncate">
+                    <h3 className="text-lg font-serif italic text-linen leading-tight clamp-2">
                       {extra.name}
                     </h3>
                     <div className="mt-1 flex items-baseline gap-2">
@@ -112,19 +113,19 @@ export const ExtrasSection = () => {
                 {/* Hover reveal — description + arrow */}
                 <div
                   className={cn(
-                    'absolute inset-0 p-5 bg-ocean/40 flex flex-col justify-between transition-opacity duration-400',
+                    'absolute inset-0 p-4 xl:p-5 bg-ocean/40 flex flex-col justify-between gap-3 transition-opacity duration-[400ms]',
                     isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
                   )}
                 >
                   <div>
-                    <h3 className="text-sm font-serif italic text-linen leading-tight mb-1">
+                    <h3 className="text-sm font-serif italic text-linen leading-tight mb-1 clamp-1">
                       {extra.name}
                     </h3>
-                    <p className="text-linen/70 font-sans text-[11px] leading-snug line-clamp-3">
+                    <p className="text-linen/70 font-sans text-[11px] xl:text-xs leading-snug clamp-4">
                       {extra.description}
                     </p>
                   </div>
-                  <div className="flex items-baseline justify-between pt-2 border-t border-linen/10">
+                  <div className="flex items-baseline justify-between shrink-0 pt-2 border-t border-linen/10">
                     <span className="text-rose font-sans text-xs tabular-nums">From {extra.priceFrom}</span>
                     <ArrowRight className="w-3.5 h-3.5 text-rose" />
                   </div>

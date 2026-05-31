@@ -43,7 +43,7 @@ const INSTAGRAM_POSTS = [
 
 export const SocialSection = () => {
   return (
-    <section className="py-16 px-6 bg-ocean relative overflow-hidden grain-overlay">
+    <section className="py-14 md:py-20 px-6 bg-ocean relative overflow-hidden grain-overlay">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-sky/10 rounded-full blur-[120px]" />
@@ -51,7 +51,7 @@ export const SocialSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-10">
           <div className="space-y-6 max-w-2xl">
             <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display">Social</span>
             <h2 className="text-5xl md:text-7xl font-display font-bold text-linen leading-[0.9] uppercase tracking-tighter">
@@ -76,7 +76,7 @@ export const SocialSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
-                className="p-4 bg-linen/5 border border-linen/10 rounded-2xl text-linen hover:bg-rose hover:border-rose transition-all duration-500 group"
+                className="p-4 bg-linen/5 border border-linen/10 rounded-sm text-linen hover:bg-rose hover:border-rose transition-all duration-500 group"
               >
                 <social.icon className="w-6 h-6" />
                 <span className="sr-only">{social.label}</span>
@@ -96,7 +96,7 @@ export const SocialSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.8 }}
-              className="group relative aspect-square rounded-2xl overflow-hidden bg-linen/5"
+              className="group relative aspect-square rounded-sm overflow-hidden bg-linen/5"
             >
               <img
                 src={post.image}

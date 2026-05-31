@@ -20,7 +20,7 @@ import { Anchor } from 'lucide-react';
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-rose/30 selection:text-ocean">
+    <div className="min-h-screen bg-ocean selection:bg-rose/30 selection:text-ocean">
       <SeasonBanner />
       <Navbar />
       
@@ -28,14 +28,14 @@ export default function App() {
         <Hero />
         
         {/* Intro Section */}
-        <section className="py-40 px-6 relative overflow-hidden grain-overlay bg-linen">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <section className="py-24 md:py-28 px-6 relative overflow-hidden grain-overlay bg-linen">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative aspect-[4/5] rounded-[4rem] overflow-hidden soft-shadow"
+              className="relative aspect-[4/5] overflow-hidden soft-shadow"
             >
               <img
                 src="https://www.charterworld.com/images/yachts-1/motor%20yacht%20SEA%20SEVEN.jpg"
@@ -54,17 +54,17 @@ export default function App() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, staggerChildren: 0.2 }}
-              className="space-y-12"
+              className="space-y-8"
             >
               <div className="space-y-6">
-                <span className="text-sage uppercase tracking-[0.6em] text-[10px] font-bold block font-display">The Heritage</span>
-                <h2 className="text-5xl md:text-7xl font-display font-bold text-ocean leading-[0.9] uppercase tracking-tighter">
+                <span className="text-rose uppercase tracking-[0.6em] text-[10px] font-bold block font-display seafarer-line">The Heritage</span>
+                <h2 className="text-5xl md:text-7xl font-serif font-semibold text-ocean leading-[0.95]">
                   Where classic lines <br /> meet the <span className="text-rose font-serif italic lowercase tracking-normal">modern sea.</span>
                 </h2>
               </div>
               
               <div className="space-y-8">
-                <p className="text-xl md:text-2xl text-charcoal/70 leading-relaxed font-serif italic tracking-wide">
+                <p className="text-xl md:text-2xl text-charcoal/72 leading-relaxed font-serif italic">
                   SEA SEVEN is a yacht of character. Originally built by the legendary 
                   Cantieri Navali Lavagna, she has been reborn to offer effortless luxury 
                   amidst the historic beauty of the Bay of Gdańsk.
@@ -95,17 +95,17 @@ export default function App() {
         
         {/* Parallax Break */}
         <div 
-          className="h-[70vh] w-full parallax-bg relative grain-overlay"
+          className="h-[46vh] md:h-[54vh] w-full parallax-bg relative grain-overlay"
           style={{ backgroundImage: 'url("https://www.charterworld.com/images/yachts-1/%5BMY-SEA-SEVEN%5D-10140-3.jpg")' }}
         >
-          <div className="absolute inset-0 bg-ocean/10" />
+          <div className="absolute inset-0 bg-ocean/45" />
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-linen text-center"
             >
-              <h3 className="text-5xl md:text-7xl font-display font-bold uppercase tracking-tighter mb-4">Timeless Elegance.</h3>
+              <h3 className="text-5xl md:text-8xl font-serif font-semibold mb-4">Timeless Elegance.</h3>
               <p className="text-xl font-serif italic tracking-widest">Sopot · Gdańsk · Gdynia</p>
             </motion.div>
           </div>
